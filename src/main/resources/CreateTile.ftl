@@ -1,5 +1,26 @@
 <html>
 <head>
+<<<<<<< HEAD
+<meta charset="utf8"/>
+<link rel="stylesheet" href"style.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<form id= "Landing Page" action=" " method="post">
+<h1>Create a Tile</h1>
+<hr style="color:red ; height:7px "/>
+
+
+
+
+
+
+
+
+
+
+
+=======
 <title>A very Simple jQuery Popup</title>
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -102,6 +123,7 @@ z-index: 100;
         </div>
     </div>
 </form>
+>>>>>>> 30fad9e9574755ae3c7bbf75dee32872ec74558d
 </form>
 </body>
 </html>
