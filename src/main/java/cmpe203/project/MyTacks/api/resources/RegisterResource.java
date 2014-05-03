@@ -5,6 +5,7 @@ import java.net.URISyntaxException;
 import java.net.UnknownHostException;
 
 import javax.ws.rs.FormParam;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -32,16 +33,12 @@ public RegisterView getRegister()
 @POST
 
 public Response verifySignup(@FormParam("firstname") String firstName, @FormParam("lastname") String lastName,@FormParam("email") String email,@FormParam("sex") String sex,@FormParam("password") String password,@FormParam("cpassword") String cpassword) throws URISyntaxException
+
 {
 
 URI uri =new URI("http://localhost:8080/MyTacks/signup");
 	Register register=new Register();
-	System.out.println("Firstname is:"+firstName);
-	System.out.println("Lastname is "+lastName);
-	System.out.println("Email is "+email);
-	System.out.println("Sex is:"+sex);
-	System.out.println("password"+password);
-	System.out.println("Confirm password is:"+cpassword);
+	
 	register.setFirstName(firstName);
 	register.setLastName(lastName);
 	register.setEmail(email);

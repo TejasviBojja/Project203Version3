@@ -58,7 +58,7 @@ function createBoard(){
 name= document.getElementById('boardname').value
 description= document.getElementById('boarddescription').value
 category= document.getElementById('boardcategory').value
-window.location.href="register?name="+ namein +"&ampdescription="+description;
+window.location.href="register?name="+ name+"&description="+description+"&category="+category;
 }
 
 </script>
@@ -186,56 +186,46 @@ input[type="submit"] {
 <img src="http://www.websigmas.com/wp-content/uploads/2013/03/Pinterest.jpg" width="50%";height="25%"; />
 </button>
 </div>
-
-
 </div>
-   
-
 </form>
-<form id="overlay_form" class ="popup" style="display:none">
 
-        <h1>
+
+<form id="overlay_form" class ="popup" style="display:none">
         <strong>Create a Board</strong>
-    </h1>
-    <ul>
-      <li>
-      <h3 >Name</h3>
-     <input type="text" name="name" id="boardname"  placeholder="Like “Places to Go” or “Recipes to Make.”" value="">
-      </div>
-            </li>
-            <li>
+      
+      	<h3 >Name</h3>
+     	<input type="text" name="name" id="boardname"  placeholder="Like “Places to Go” or “Recipes to Make.”" value="">
+           
         <h3><label for="boardEditDescription">Description</label></h3>
-       <div>
        <input type="textarea" name="name" id="boarddescription"  placeholder="What's your board about?" value="">
     
-                </div>
-            </li>
-            <li>
-                <h3><label for="boardEditCategory">Category</label></h3>
-               
+              
+       <h3><label for="boardEditCategory">Category</label></h3>     
     
-	<select id="boardcategory">
-	  	<option value="other">What kind of board is it?</option>
-  		<option value="volvo">Volvo</option>
-  		<option value="saab">Saab</option>
-  		<option value="mercedes">Mercedes</option>
-  		<option value="audi">Audi</option>
+		<select id="boardcategory">
+	  		<option value="other">What kind of board is it?</option>
+  			<option value="music">Music</option>
+  			<option value="education">Education</option>
+  			<option value="literature">Literature</option>
+  			<option value="travel">Travel</option>
+  			<option value="home">Home</option>
+  			<option value="cars">Cars</option>
+  			<option value="popular">Popular</option>
+  			<option value="fashion">Fashion</option>
+  			<option value="sports">Sports</option>
+  			<option value="images">Images</option>
 		</select>
-    
-         <div class="formFooter">
-        <div class="formFooterButtons">
-            <button type="button" onclick="closepopup()" class="rounded Button hasText Module ajax btn cancelButton">    
+         	<div class="formFooter">
+        		<div class="formFooterButtons">
+            	<button type="button" onclick="closepopup()" class="rounded Button hasText Module ajax btn cancelButton">    
+					<span class="buttonText">Cancel</span>
+        		</button>
 
-
-<span class="buttonText">Cancel</span>
-        </button>
-
-            <button type="button" onclick="createBoard()" class="hasText rounded saveBoardButton Button primary Module ajax btn">    
-
-
-<span class="buttonText">Create Board</span>
-        </button>
+            	<button type="button" onclick="createBoard()" class="hasText rounded saveBoardButton Button primary Module ajax btn">    
+					<span class="buttonText">Create Board</span>
+        		</button>
+        	</div>
         </div>
-        </form>
+       </form>
 </body>
 </html>
