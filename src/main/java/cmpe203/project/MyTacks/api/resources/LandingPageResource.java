@@ -7,9 +7,12 @@ import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
+
+
+import cmpe203.project.MyTacks.dao.mongo;
 //import cmpe203.project.MyTacks.views.HomeView;
 import cmpe203.project.MyTacks.views.LandingPageView;
 
@@ -25,8 +28,12 @@ public class LandingPageResource {
 	}
 
 	@GET
-	public LandingPageView getLandingPage()
+	public LandingPageView getLandingPage(@QueryParam("name") String name,@QueryParam("description") String description,@QueryParam("category") String category)
 	{
+	
+			mongo test=new mongo();
+			test.createBoard(name,description,category);
+	
 		return new LandingPageView();
 	}
 	

@@ -1,7 +1,4 @@
 package cmpe203.project.MyTacks.dao;
-
-
-
 import java.net.UnknownHostException;
 import java.util.Map;
 import java.util.Set;
@@ -15,6 +12,7 @@ import java.net.UnknownHostException;
 import java.util.Set;
 
 import cmpe203.project.MyTacks.domain.Register;
+
 
 
 
@@ -34,7 +32,7 @@ import com.mongodb.ServerAddress;
 		public mongo() {
 			 
 			try {
-				mongoClient = new MongoClient("localhost" , 27017);
+				mongoClient = new MongoClient(new ServerAddress("localhost" , 27017));
 			} catch (UnknownHostException e) {
 				
 				e.printStackTrace();
@@ -107,6 +105,24 @@ import com.mongodb.ServerAddress;
 			DBObject obj=collection.findOne(query);
 			obj.put("password",password);
 			collection.save(obj);
+		}
+
+		public void createBoard(String name, String description, String category) {
+			// TODO Auto-generated method stub
+			DBCollection collection=db.getCollection("boards");
+			try
+			{
+				BasicDBObject object=new BasicDBObject();
+				object.put("name",name);
+
+				object.put("description",description);
+				object.put("category", category);
+				collection.insert(object);
+			}
+			catch (MongoException.DuplicateKey e) {
+	            System.out.println("Board already exists");
+			}
+		
 		}
 	}
 		
