@@ -12,6 +12,7 @@ function loginPage(){
 </script>
 </body>
 <form >
+
 <div style="text-align:center; background-image: url(http://data1.whicdn.com/images/12279344/large.jpg) ; height: 400px; width: 450px; border: 1px solid black; margin:0 auto;">
 <h3 align="center" style="font-family:lucida calligraphy;font-size:30px;color:red">MyTacks<h3>
 <h6 align="center" style="font-family:lucida calligraphy;font-size:10px;color:black">Join MyTacks to share and find all you like !!<h6>

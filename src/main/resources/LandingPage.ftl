@@ -4,9 +4,80 @@
 <link rel="stylesheet" href"style.css" type="text/css" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-</head>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+<script type="text/javascript">
+{
+
+
+//close popup
+$("#close, #overlay_form").click(function(){
+
+$("#Landing_Page").fadeOut(500);
+});
+});
+
+$("#overlay_form").css({
+left: ($(window).width() - $('#overlay_form').width()) / 2,
+top: ($(window).width() - $('#overlay_form').width()) / 7,
+position:'absolute'
+});
+}
+//maintain the popup at center of the page when browser resized
+$(window).bind('resize',positionPopup);
+</script>
 <style>
+#overlay_form{
+position: absolute;
+border: 5px solid lightblue;
+padding: 10px;
+background: white;
+width: 500px;
+height: 370px;
+z-index: 200;
+}
+
+
+</style>
+<script>
+var name;
+var decsription;
+var category;
+function popUp(){
+$("#overlay_form").fadeIn(1000);
+$("#Landing_Page").fadeOut(500);
+
+}
+function closepopup(){
+$("#Landing_Page").fadeIn(1000);
+$("#overlay_form").fadeOut(500);
+}
+
+function createBoard(){
+name= document.getElementById('boardname').value
+description= document.getElementById('boarddescription').value
+category= document.getElementById('boardcategory').value
+window.location.href="register?name="+ namein +"&ampdescription="+description;
+}
+
+</script>
+</head>
+<style>
+.popup{
+    border-radius: 7px;
+    background:#6b6a63;
+    margin:30px auto 0;
+    padding:6px;  
+    // here it comes
+    position:absolute;
+    width:800px;
+    top: 20%;
+    left: 60%;
+    margin-left: -400px; // 1/2 width
+    margin-top: -40px; // 1/2 height
+}
+
 
 /* These styles create the dropdown menus. */
 #navbar {
@@ -66,20 +137,9 @@ input[type="submit"] {
 }
 </style>
 <body>
-<form id= "Landing Page" action=" " method="post">
-<script>
-function popUp(){
-var p=window.createPopup();
-var pbody=p.document.body;
-pbody.style.backgroundColor="lime";
-pbody.style.border="solid black 1px";
-pbody.innerHTML="This is a pop-up! Click outside the pop-up to close.";
-p.show(150,150,200,50,document.body);
-s
-}
-</script>
+<form id="Landing_Page" action=" " method="post">
 <div id="container">
-
+<input type="button" name="Create Board" value="Create Board" onclick="popUp()">
 <div id="header" style="color:red;border:1px solid white;background-image: url(http://www.owningpink.com/sites/default/files/images/wp/2010/01/colorful_dots.jpg); text-align=center; height:50px; width=100%">
     <span style="float: left;">
             &nbsp<input type="search" style="border:2px solid black; height:45; width:200; font-size:20px; background-color:#C8C8C8" placeholder="Search" />
@@ -88,17 +148,15 @@ s
     
     <span style="float: right">
            <nav> 
-           
+          
            <ul id="navbar">
-            <input type="button" onclick="popUp()" style="border:2px solid black; height:50; width:75" value="Create Board"/>           
+                     
            <li><a href="http://localhost:8080/MyTacks/LandingPage"><b>TEJASVI BOJJA</b></a>
 			<div>
 				<ul>
 					<li><a href="http://localhost:8080/MyTacks/LandingPage"><b>YOUR PROFILE</b></a></li>
 					<li><a href="http://localhost:8080/MyTacks/EditProfile"><b>EDIT PROFILE</b></a></li>
 					<li><a href="products.html#chair"><b>SETTINGS</b></a></li>
-					<li><a href="products.html#chair"><b>UPLOAD A PIN</b></a></li>
-					<li><a href="http://localhost:8080/MyTacks/CreateBoard"><b>CREATE&nbspBOARD</b></a></li>
 					<li><a href="http://localhost:8080/MyTacks/InviteFriend"><b>FIND FRIENDS</b></a></li>
 					<li><a href="http://localhost:8080/MyTacks/home"><b>LOGOUT</b></a></li>
 				</ul>
@@ -134,5 +192,50 @@ s
    
 
 </form>
+<form id="overlay_form" class ="popup" style="display:none">
+
+        <h1>
+        <strong>Create a Board</strong>
+    </h1>
+    <ul>
+      <li>
+      <h3 >Name</h3>
+     <input type="text" name="name" id="boardname"  placeholder="Like “Places to Go” or “Recipes to Make.”" value="">
+      </div>
+            </li>
+            <li>
+        <h3><label for="boardEditDescription">Description</label></h3>
+       <div>
+       <input type="textarea" name="name" id="boarddescription"  placeholder="What's your board about?" value="">
+    
+                </div>
+            </li>
+            <li>
+                <h3><label for="boardEditCategory">Category</label></h3>
+               
+    
+	<select id="boardcategory">
+	  	<option value="other">What kind of board is it?</option>
+  		<option value="volvo">Volvo</option>
+  		<option value="saab">Saab</option>
+  		<option value="mercedes">Mercedes</option>
+  		<option value="audi">Audi</option>
+		</select>
+    
+         <div class="formFooter">
+        <div class="formFooterButtons">
+            <button type="button" onclick="closepopup()" class="rounded Button hasText Module ajax btn cancelButton">    
+
+
+<span class="buttonText">Cancel</span>
+        </button>
+
+            <button type="button" onclick="createBoard()" class="hasText rounded saveBoardButton Button primary Module ajax btn">    
+
+
+<span class="buttonText">Create Board</span>
+        </button>
+        </div>
+        </form>
 </body>
 </html>
