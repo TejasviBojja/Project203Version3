@@ -5800,3 +5800,455 @@ INFO  [2014-05-03 21:06:57,811] com.yammer.dropwizard.config.Environment: tasks 
 INFO  [2014-05-03 21:06:58,503] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
 WARN  [2014-05-03 21:06:58,506] org.eclipse.jetty.server.AbstractConnector: insufficient threads configured for SocketConnector@0.0.0.0:8081
 INFO  [2014-05-03 21:06:58,506] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+WARN  [2014-05-03 22:33:06,906] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-03 22:33:07,079] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-03 22:33:07,084] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-03 22:33:07,300] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-03 22:33:07,473] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+
+INFO  [2014-05-03 22:33:07,473] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-03 22:33:08,216] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+WARN  [2014-05-03 22:33:08,220] org.eclipse.jetty.server.AbstractConnector: insufficient threads configured for SocketConnector@0.0.0.0:8081
+INFO  [2014-05-03 22:33:08,221] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+WARN  [2014-05-03 22:38:17,973] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-03 22:38:18,157] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-03 22:38:18,162] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-03 22:38:18,374] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-03 22:38:18,542] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+
+INFO  [2014-05-03 22:38:18,543] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-03 22:38:19,251] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2014-05-03 22:38:19,255] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+WARN  [2014-05-03 22:39:14,096] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-03 22:39:14,280] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-03 22:39:14,284] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-03 22:39:14,510] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-03 22:39:14,720] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+
+INFO  [2014-05-03 22:39:14,723] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-03 22:39:15,570] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2014-05-03 22:39:15,574] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+WARN  [2014-05-03 22:39:51,798] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-03 22:39:51,971] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-03 22:39:51,976] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-03 22:39:52,204] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-03 22:39:52,379] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+
+INFO  [2014-05-03 22:39:52,379] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-03 22:39:53,128] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2014-05-03 22:39:53,131] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+WARN  [2014-05-03 22:40:24,710] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-03 22:40:24,877] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-03 22:40:24,882] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-03 22:40:25,094] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-03 22:40:25,261] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+
+INFO  [2014-05-03 22:40:25,262] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-03 22:40:25,999] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2014-05-03 22:40:26,003] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+WARN  [2014-05-03 22:41:12,746] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-03 22:41:12,926] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-03 22:41:12,930] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-03 22:41:13,152] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-03 22:41:13,330] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+
+INFO  [2014-05-03 22:41:13,331] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-03 22:41:14,046] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+WARN  [2014-05-03 22:41:14,051] org.eclipse.jetty.server.AbstractConnector: insufficient threads configured for SocketConnector@0.0.0.0:8081
+INFO  [2014-05-03 22:41:14,051] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+WARN  [2014-05-03 22:41:54,482] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-03 22:41:54,651] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-03 22:41:54,656] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-03 22:41:54,865] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-03 22:41:55,072] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+
+INFO  [2014-05-03 22:41:55,072] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-03 22:41:55,760] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2014-05-03 22:41:55,764] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+WARN  [2014-05-03 22:42:43,119] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-03 22:42:43,305] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-03 22:42:43,311] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-03 22:42:43,542] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-03 22:42:43,724] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+
+INFO  [2014-05-03 22:42:43,725] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-03 22:42:44,507] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2014-05-03 22:42:44,511] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+WARN  [2014-05-03 22:45:01,941] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-03 22:45:02,127] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-03 22:45:02,131] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-03 22:45:02,353] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-03 22:45:02,533] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+
+INFO  [2014-05-03 22:45:02,534] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-03 22:45:03,461] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2014-05-03 22:45:03,475] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+WARN  [2014-05-03 22:46:19,325] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-03 22:46:19,492] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-03 22:46:19,496] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-03 22:46:19,705] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-03 22:46:19,872] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+
+INFO  [2014-05-03 22:46:19,872] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-05-03 22:46:20,565] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2014-05-03 22:46:20,569] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
