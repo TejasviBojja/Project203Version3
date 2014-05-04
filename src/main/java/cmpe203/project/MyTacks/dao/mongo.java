@@ -125,7 +125,19 @@ import com.mongodb.ServerAddress;
 		
 		}
 		
-			public void editProfile(Register reg){
+		//get display firstname after logging in with email 
+		public String getFirstName(String email)
+		{
+			String fname;
+			DBCollection collection=db.getCollection("users");	
+			DBObject query=new BasicDBObject("email",email);		
+			DBObject obj=collection.findOne(query);	
+			fname=((String) obj.get("firstname"));	
+			return fname;
+		}
+
+
+		public void editProfile(Register reg){
 			DBCollection collection = db.getCollection("users"); 
 			try
 			{
