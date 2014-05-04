@@ -114,6 +114,42 @@ import com.mongodb.ServerAddress;
 			}
 		
 		}
+		
+		//get display firstname after logging in with email 
+		public String getFirstName(String email)
+		{
+			String fname;
+			DBCollection collection=db.getCollection("users");	
+			DBObject query=new BasicDBObject("email",email);		
+			DBObject obj=collection.findOne(query);	
+			fname=((String) obj.get("firstname"));	
+			return fname;
+		}
+
+
+		public void editProfile(Register reg){
+			DBCollection collection = db.getCollection("users"); 
+			try
+			{
+				BasicDBObject object=new BasicDBObject();
+				
+				object.put("firstname",reg.getFirstName());
+				object.put("lastname",reg.getLastName());
+				object.put("email", reg.getEmail());
+				object.put("sex", reg.getSex());
+				object.put("password", reg.getPassword());
+				object.put("cpassword", reg.getCpassword());
+
+				//object.put("verify", register.getEmail_Verified());
+
+				collection.insert(object);
+			}
+			catch (MongoException.DuplicateKey e) {
+	            System.out.println("Username already in use");
+			}
+			
+		}
+
 	}
 		
 	

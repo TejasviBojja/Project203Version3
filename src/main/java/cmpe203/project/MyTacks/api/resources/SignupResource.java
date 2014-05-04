@@ -45,13 +45,15 @@ public class SignupResource {
 		signup.setPassword(password);
 		int value=test.verifyLogin(signup);
 		System.out.println("value in signup class is ::"+value);
-		if(value==1)
-		 uri=new URI("http://localhost:8080/MyTacks/LandingPage");
+		if(value==1){
+		 String name= test.getFirstName(email);
+		 uri=new URI("http://localhost:8080/MyTacks/LandingPage?name");
+		}
 		if(value==2)
 			uri=new URI("http://localhost:8080/MyTacks/register");
 		
 		return Response.seeOther(uri).build();
 		//return null;
-}
+	}
 }
 
