@@ -1,3 +1,5 @@
+<#-- @ftlvariable name="" type="cmpe203.project.MyTacks.views.LandingPageView" -->
+
 <html>
 <head>
 <meta charset="utf8"/>
@@ -6,6 +8,36 @@
 
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+ 
+<script>
+ $(function() {
+    var availableCategories = [
+      "Music",
+      "Education",
+      "Literature",
+      "Movies",
+      "Travel",
+      "Art",
+      "Videos",
+      "Technology",
+      "Humour",
+      "Home",
+      "Animal",
+      "Cars",
+      "Popular",
+      "Fashion",
+      "Sports",
+      "Images"
+    ];
+    $( "#categories" ).autocomplete({
+      source: availableCategories
+    });
+  });
+  </script>
 
 <script type="text/javascript">
 {
@@ -140,18 +172,23 @@ input[type="submit"] {
 <form id="Landing_Page" action=" " method="post">
 <div id="container">
 <input type="button" name="Create Board" value="Create Board" onclick="popUp()">
+
 <div id="header" style="color:red;border:1px solid white;background-image: url(http://www.owningpink.com/sites/default/files/images/wp/2010/01/colorful_dots.jpg); text-align=center; height:50px; width=100%">
+    <div id="search>
+    <form action="/LandingPage/" method="GET" name="search">
     <span style="float: left;">
-            &nbsp<input type="search" style="border:2px solid black; height:45; width:200; font-size:20px; background-color:#C8C8C8" placeholder="Search" />
+            &nbsp<input id="categories" type="search" style="border:2px solid black; height:45; width:200; font-size:20px; background-color:#C8C8C8" placeholder="Search" autocomplete="on" />
             <input type="submit" value="Search"/>
     </span>
+    </form>
+    </div>
     
     <span style="float: right">
            <nav> 
           
            <ul id="navbar">
                      
-           <li><a href="http://localhost:8080/MyTacks/LandingPage"><b>TEJASVI BOJJA</b></a>
+           <li><a href="http://localhost:8080/MyTacks/LandingPage"><b>${name?html}</b></a>
 			<div>
 				<ul>
 					<li><a href="http://localhost:8080/MyTacks/LandingPage"><b>YOUR PROFILE</b></a></li>
@@ -177,7 +214,7 @@ input[type="submit"] {
 
 <div id="center" style="border:2px solid white;background-image: url(http://en.clipdealer.com/preview/image/000/385/426/previews/4--385426-Particle%20party%20on%20white%20background.jpg);background-size: cover; background-position: center center; background-repeat: no-repeat;background-attachment: fixed;width:50%; height:205px;position:absolute;>
 <style="text-align:right;left:250px; bottom:356px;font-size=200px;"><img src="http://www.websigmas.com/wp-content/uploads/2013/03/Pinterest.jpg"  "width=100%; height=200px; border="2";>
-<h1 style="color:#400000 ; position:absolute;top:20px;left:210px;"><b>TEJASVI BOJJA</b></h1>
+<h1 style="color:#400000 ; position:absolute;top:20px;left:210px;"><b>${name?html}</b></h1>
 </div>
 
 &nbsp  <div id="center1" style="border:2px solid white;background-image: url(http://en.clipdealer.com/preview/image/000/385/426/previews/4--385426-Particle%20party%20on%20white%20background.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat;background-attachment: fixed;position:absolute; right:350px;width:22%; height:205px;bottom:355px;">
@@ -224,6 +261,8 @@ input[type="submit"] {
             	<button type="button" onclick="createBoard()" class="hasText rounded saveBoardButton Button primary Module ajax btn">    
 					<span class="buttonText">Create Board</span>
         		</button>
+        	</div>
+        	
         	</div>
         </div>
        </form>
