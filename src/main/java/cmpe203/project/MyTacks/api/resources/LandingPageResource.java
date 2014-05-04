@@ -7,6 +7,7 @@ import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+//import javax.ws.rs.QueryParam;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
@@ -28,13 +29,11 @@ public class LandingPageResource {
 	}
 
 	@GET
-	public LandingPageView getLandingPage(@QueryParam("name") String name,@QueryParam("description") String description,@QueryParam("category") String category)
+	public LandingPageView getLandingPage(@QueryParam("name") String firstName)
 	{
-	
-			mongo test=new mongo();
-			test.createBoard(name,description,category);
-	
-		return new LandingPageView();
+		firstName=""+firstName;
+		return new LandingPageView(firstName);
+
 	}
 	
 
