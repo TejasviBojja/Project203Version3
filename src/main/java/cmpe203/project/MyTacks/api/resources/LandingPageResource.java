@@ -28,15 +28,12 @@ public class LandingPageResource {
 	}
 
 	@GET
-	public LandingPageView getLandingPage(@QueryParam("name") String name,@QueryParam("description") String description,@QueryParam("category") String category)
+	public LandingPageView getLandingPage()
 	{
 	
-			mongo test=new mongo();
-			test.createBoard(name,description,category);
-	
-		return new LandingPageView();
+			return new LandingPageView();
 	}
 	
 
 }
-//}
+

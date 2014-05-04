@@ -2,20 +2,11 @@ package cmpe203.project.MyTacks.dao;
 import java.net.UnknownHostException;
 import java.util.Map;
 import java.util.Set;
-
-import org.bson.BSONObject;
-
 import cmpe203.project.MyTacks.domain.Register;
 import cmpe203.project.MyTacks.domain.Signup;
-
 import java.net.UnknownHostException;
 import java.util.Set;
-
 import cmpe203.project.MyTacks.domain.Register;
-
-
-
-
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
@@ -32,7 +23,7 @@ import com.mongodb.ServerAddress;
 		public mongo() {
 			 
 			try {
-				mongoClient = new MongoClient(new ServerAddress("localhost" , 27017));
+				mongoClient = new MongoClient(new ServerAddress("10.0.0.22" , 27017));
 			} catch (UnknownHostException e) {
 				
 				e.printStackTrace();
@@ -114,7 +105,6 @@ import com.mongodb.ServerAddress;
 			{
 				BasicDBObject object=new BasicDBObject();
 				object.put("name",name);
-
 				object.put("description",description);
 				object.put("category", category);
 				collection.insert(object);

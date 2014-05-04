@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 <head>
 <meta charset="utf8"/>
 <link rel="stylesheet" href"style.css" type="text/css" />
@@ -24,9 +24,24 @@ top: ($(window).width() - $('#overlay_form').width()) / 7,
 position:'absolute'
 });
 }
+
+$("#upload_form").css({
+left: ($(window).width() - $('#upload_form').width()) / 2,
+top: ($(window).width() - $('#upload_form').width()) / 7,
+position:'absolute'
+});
+}
+
+$("#pickB_form").css({
+left: ($(window).width() - $('#pickB_form').width()) / 2,
+top: ($(window).width() - $('#pickB_form').width()) / 7,
+position:'absolute'
+});
+}
 //maintain the popup at center of the page when browser resized
 $(window).bind('resize',positionPopup);
 </script>
+
 <style>
 #overlay_form{
 position: absolute;
@@ -38,14 +53,44 @@ height: 370px;
 z-index: 200;
 }
 
+#upload_form{
+position: absolute;
+border: 5px solid lightblue;
+padding: 10px;
+background: white;
+width: 450px;
+height: 200px;
+z-index: 200;
+}
+
+#pickB_form{
+position: absolute;
+border: 5px solid lightblue;
+padding: 10px;
+background: white;
+width: 500px;
+height: 400px;
+z-index: 200;
+}
 
 </style>
+
 <script>
 var name;
 var decsription;
 var category;
+var ImageURL;
+var ImageDescription;
+var BoardCategory;
+
 function popUp(){
 $("#overlay_form").fadeIn(1000);
+$("#Landing_Page").fadeOut(500);
+
+}
+
+function popUpFile(){
+$("#upload_form").fadeIn(1000);
 $("#Landing_Page").fadeOut(500);
 
 }
@@ -53,13 +98,49 @@ function closepopup(){
 $("#Landing_Page").fadeIn(1000);
 $("#overlay_form").fadeOut(500);
 }
+function closepopupFile(){
+$("#Landing_Page").fadeIn(1000);
+$("#upload_form").fadeOut(500);
+}
+
+function popUpPickb(){
+ImageURL= document.getElementById('url').value
+document.getElementById('mypic').setAttribute('src',ImageURL) 
+$("#pickB_form").fadeIn(1000);
+$("#upload_form").fadeOut(500);
+
+}
+function closepopupBoard(){
+$("#Landing_Page").fadeIn(1000);
+$("#pickB_form").fadeOut(500);
+}
+
 
 function createBoard(){
 name= document.getElementById('boardname').value
 description= document.getElementById('boarddescription').value
 category= document.getElementById('boardcategory').value
-window.location.href="register?name="+ name+"&description="+description+"&category="+category;
+window.location.href="AddTile?name="+ name+"&description="+description+"&category="+category;
 }
+
+function FileUpload(){
+
+$("#upload_form").fadeOut(500);
+$("#pickBoard_form").fadeIn(1000);
+
+}
+
+function PickBoard(){
+ImageDescription= document.getElementById('imageDescription').value
+BoardCategory=document.getElementById('boardCategory').value
+window.location.href="register?name="+ namein +"&ampdescription="+description;
+}
+
+
+function imagedisplay(){
+alert('in function');
+}
+
 
 </script>
 </head>
@@ -78,6 +159,17 @@ window.location.href="register?name="+ name+"&description="+description+"&catego
     margin-top: -40px; // 1/2 height
 }
 
+.button1 {
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+font-size: 12px; 
+font-weight: bold; 
+color: #003366
+border: #00ffff;
+border-style: dashed;
+border-width: 5px;
+border-color:yellow;
+background-image:url(https://cdn3.iconfinder.com/data/icons/buttons/512/Icon_11-128.png);
+}
 
 /* These styles create the dropdown menus. */
 #navbar {
@@ -140,6 +232,8 @@ input[type="submit"] {
 <form id="Landing_Page" action=" " method="post">
 <div id="container">
 <input type="button" name="Create Board" value="Create Board" onclick="popUp()">
+<input type="button" name="fileUpload" value="+" onclick="popUpFile()">
+
 <div id="header" style="color:red;border:1px solid white;background-image: url(http://www.owningpink.com/sites/default/files/images/wp/2010/01/colorful_dots.jpg); text-align=center; height:50px; width=100%">
     <span style="float: left;">
             &nbsp<input type="search" style="border:2px solid black; height:45; width:200; font-size:20px; background-color:#C8C8C8" placeholder="Search" />
@@ -185,14 +279,73 @@ input[type="submit"] {
 <button style= width:15%; height:25% ;">
 <img src="http://www.websigmas.com/wp-content/uploads/2013/03/Pinterest.jpg" width="50%";height="25%"; />
 </button>
+<input id="brd1" type="button" class="button1" onclick="popUp()" style="float:left;height:300; width:175; background:white" value="Create a Board">
 </div>
 </div>
 </form>
 
 
+ <form id="upload_form" class ="popup" style="display:none" >
+
+        <h1>
+        <strong>Upload Tile</strong>
+   		</h1>
+
+      <h3 >Choose File </h3>
+	  <input type="text" name="imageUrl" id="url"  placeholder="Enter your image URL?">
+		<br><br>
+		
+      <div class="formFooter">
+      	<div class="formFooterButtons">
+            
+        	<button type="button" onclick="closepopupFile()" class="">     
+				<span class="buttonText">Cancel</span>
+       		</button>
+ 
+            <button type="button" onclick="popUpPickb()" class="">   
+			<span class="buttonText">Next</span>
+        	</button>
+        </div>
+     </div>
+</form>
+
+<form id="pickB_form" class ="popup" style="display:none" >
+
+        <h1>
+        <strong>Pick a Board</strong>
+   		</h1>
+<table cellpadding="30">
+<tr>
+	<td>
+      <h3 >Category </h3>
+      <h3><label for="ImageEditDescription">Description</label></h3>
+     
+      <input type="textarea" name="name" id="Imagedescription"  placeholder="Tell us about your image?" value="">
+    </td>
+    <td align="right">
+      <img id="mypic" src="neutral.jpg" height="200" width="200">  
+     </td>
+</tr>
+<tr>
+	<td>
+      <div class="formFooter">
+      	<div class="formFooterButtons">
+            
+        	<button type="button" onclick="closepopupBoard()" class="">     
+				<span class="buttonText">Cancel</span>
+       		</button>
+ 
+            <button type="button" onclick="PickBoard()" class="">   
+			<span class="buttonText">Pin Image</span>
+        	</button>
+        </div>
+     </div>
+    </td>
+</tr>
+</table>
+</form>
 <form id="overlay_form" class ="popup" style="display:none">
         <strong>Create a Board</strong>
-      
       	<h3 >Name</h3>
      	<input type="text" name="name" id="boardname"  placeholder="Like “Places to Go” or “Recipes to Make.”" value="">
            
