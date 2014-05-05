@@ -18,6 +18,9 @@ import cmpe203.project.MyTacks.domain.Signup;
 import cmpe203.project.MyTacks.views.LandingPageView;
 import cmpe203.project.MyTacks.views.SignupView;
 
+/** 
+ * This class will create a login page for allowing the user to login to the portal
+ */
 @Path("/signup")
 public class SignupResource {
 
@@ -28,14 +31,20 @@ public class SignupResource {
 	
 	}
 	
-
+	/** 
+ 	* This method will call the SignupView() class to get the view for login
+ 	*/
 	@GET
 	public  SignupView getSignUp()
 	{
 		return new  SignupView();
 	}
 	
-@POST
+	/**
+	 * This method will allow for the user to verify the login and password and provide access to portal as per the validity of the credentials provided
+	 * @FormParam takes email id and password as input, goes into the database and if he/she is an authenticated person-then allows access to portal
+	 */
+	@POST
 	public LandingPageView verifySignup(@FormParam("email") String email, @FormParam("password") String password) throws URISyntaxException
 	{
 		
