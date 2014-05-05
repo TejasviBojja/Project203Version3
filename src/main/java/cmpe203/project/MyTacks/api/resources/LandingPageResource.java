@@ -28,10 +28,10 @@ public class LandingPageResource {
 
 	@GET
 
-	public LandingPageView getLandingPage(@QueryParam("firstName") String firstName)
+	public void getLandingPage(@QueryParam("firstName") String firstName)
 	{
 		
-		return new LandingPageView(firstName);
+		//return new LandingPageView();
 
 
 	}

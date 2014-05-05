@@ -44,7 +44,6 @@ URI uri =new URI("http://localhost:8080/MyTacks/signup");
 	register.setEmail(email);
 	register.setSex(sex);
 	register.setPassword(password);
-	register.setCpassword(cpassword);
 	register.setEmail_Verified("no");
 	mongo test = new mongo();
 	

@@ -19,12 +19,31 @@ public class Register {
 	@JsonProperty("password")
 	private String password;
 	
-	@JsonProperty("cpassword")
-	private String cpassword;
 	
+	public Board getBoard() {
+		return board;
+	}
+
+
+	public void setBoard(Board board) {
+		this.board = board;
+	}
+
+
+	public Tile getTile() {
+		return tile;
+	}
+
+
+	public void setTile(Tile tile) {
+		this.tile = tile;
+	}
+
+
 	private String email_Verified;
 	
-	
+	Board board;
+	Tile tile;
 
 
 	public String getEmail_Verified() {
@@ -87,14 +106,6 @@ public class Register {
 	}
 
 
-	public String getCpassword() {
-		return cpassword;
-	}
-
-
-	public void setCpassword(String cpassword) {
-		this.cpassword = cpassword;
-	}
-
+	
 
 }

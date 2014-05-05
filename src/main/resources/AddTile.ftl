@@ -1,4 +1,5 @@
-<html>
+<#-- @ftlvariable name="" type="cmpe203.project.MyTacks.views.AddTileView" -->
+﻿<html>
 
 <head>
 
@@ -24,7 +25,6 @@ z-index: 200;
 
 <script type="text/javascript">
 {
-
 
 //close popup
 $("#close, #popup_form").click(function(){
@@ -52,6 +52,9 @@ $(window).bind('resize',positionPopup);
 </script>
 
 <script>
+var ImageDescription;
+var BoardCategory;
+var ImageURL;
 function popUp(){
 
 $("#popup_form").fadeIn(500);
@@ -59,6 +62,13 @@ $("#Main_page").fadeOut(1000);
 
 }
 
+function PickBoard(){
+alert('Function caleed');
+ImageDescription= document.getElementById('imageDescription').value
+BoardCategory=document.getElementById('boardCategory').value
+window.location.href="AddTile/tile?boardName="+ BoardCategory +"&description="+ImageDescription+"&url="+ImageURL+"&email=deepthibrndvnm@gmail.com";
+
+}
 function popUpPickb(){
 ImageURL= document.getElementById('url').value
 document.getElementById('mypic').setAttribute('src',ImageURL) 
@@ -193,9 +203,10 @@ input[type="submit"]
 <tr>
 	<td>
       <h3 >Category </h3>
+            <input type="textarea" name="name" id="boardCategory"  placeholder="Tell us about your image?" value="board1">
       <h3><label for="ImageEditDescription">Description</label></h3>
      
-      <input type="textarea" name="name" id="Imagedescription"  placeholder="Tell us about your image?" value="">
+      <input type="textarea" name="name" id="imageDescription"  placeholder="Tell us about your image?" value="">
     </td>
     <td align="right">
       <img id="mypic" src="neutral.jpg" height="200" width="200">  
@@ -285,7 +296,7 @@ input[type="submit"]
 <form id="Main_page" action=" " method="post">
 
 <div id="container">
-
+ 
 <div id="header" style="color:red;border:1px solid white;background-image: url(http://www.owningpink.com/sites/default/files/images/wp/2010/01/colorful_dots.jpg); text-align=center; height:50px; width=100%">
     <span style="float: left;">
        &nbsp<input type="search" style="border:2px solid black; height:45; width:200; font-size:20px; background-color:#C8C8C8" placeholder="Search" />
@@ -296,15 +307,14 @@ input[type="submit"]
            <nav> 
            
            <ul id="navbar">
-                    
-           <li><a href="http://localhost:8080/MyTacks/LandingPage"><b>${boardName?html}</b></a>
+                   
+           <li><a href="http://localhost:8080/MyTacks/LandingPage"><b>MyProfile</b></a>
+			
 			<div>
 				<ul>
 					<li><a href="http://localhost:8080/MyTacks/LandingPage"><b>YOUR PROFILE</b></a></li>
 					<li><a href="http://localhost:8080/MyTacks/EditProfile"><b>EDIT PROFILE</b></a></li>
 					<li><a href="products.html#chair"><b>SETTINGS</b></a></li>
-					<li><a href="products.html#chair"><b>UPLOAD A PIN</b></a></li>
-					<li><a href="http://localhost:8080/MyTacks/CreateBoard"><b>CREATE&nbspBOARD</b></a></li>
 					<li><a href="http://localhost:8080/MyTacks/InviteFriend"><b>FIND FRIENDS</b></a></li>
 					<li><a href="http://localhost:8080/MyTacks/home"><b>LOGOUT</b></a></li>
 				</ul>
@@ -321,14 +331,15 @@ input[type="submit"]
 </div>
 
 <br>
-
-<h1><center> Board Name</center><h1>
+<#list board as b>
+<h1><center>${b.boardName}</center><h1>
+<h3><center>${b.description}</center><h3>
 <div id="center" style="border:2px solid white;width:90%; height:67px;position:absolute;left:60px;">
 	<style="text-align:right;left:250px; bottom:356px;font-size=200px;"><img src="http://www.websigmas.com/wp-content/uploads/2013/03/Pinterest.jpg"  "width=50%; height=65px; border="2";>
-	<p style="color:#400000 ; position:absolute;top:10px;left:77px;font-size:20px;"><b>TEJASVI BOJJA</b></p>
+	<p style="color:#400000 ; position:absolute;top:10px;left:77px;font-size:20px;"><b>My Profile</b></p>
  	<input type="button"  onclick="popUp()" style="border:2px solid black; height:50; width:100px; position:absolute; left:700px;bottom:7px;" value="Edit Board"/>
  </div>
- 
+ </#list>
  <br>
  <br>
 

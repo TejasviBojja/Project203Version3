@@ -1,12 +1,20 @@
 package cmpe203.project.MyTacks.dao;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
 import cmpe203.project.MyTacks.domain.Register;
 import cmpe203.project.MyTacks.domain.Signup;
+import cmpe203.project.MyTacks.domain.Tile;
+
 import java.net.UnknownHostException;
 import java.util.Set;
+
 import cmpe203.project.MyTacks.domain.Register;
+
+import com.mongodb.BasicDBList;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
@@ -24,8 +32,7 @@ import com.mongodb.ServerAddress;
 			 
 			try {
 				mongoClient = new MongoClient(new ServerAddress("10.0.0.22" , 27017));
-			} catch (UnknownHostException e) {
-				
+			} catch (UnknownHostException e) {				
 				e.printStackTrace();
 			}
 
@@ -46,8 +53,7 @@ import com.mongodb.ServerAddress;
 				object.put("email", register.getEmail());
 				object.put("sex", register.getSex());
 				object.put("password", register.getPassword());
-				object.put("cpassword", register.getCpassword());
-
+		
 				object.put("verify", register.getEmail_Verified());
 
 				collection.insert(object);
@@ -98,16 +104,21 @@ import com.mongodb.ServerAddress;
 			collection.save(obj);
 		}
 
-		public void createBoard(String name, String description, String category) {
+		public void createBoard(String email,String name, String description, String category) {
 			// TODO Auto-generated method stub
-			DBCollection collection=db.getCollection("boards");
+			DBCollection collection=db.getCollection("users");
 			try
 			{
+				DBObject query=new BasicDBObject("email",email);
+				DBObject obj=collection.findOne(query);
 				BasicDBObject object=new BasicDBObject();
-				object.put("name",name);
+				BasicDBList object1=new BasicDBList();
+				object.put("name", name);
 				object.put("description",description);
 				object.put("category", category);
-				collection.insert(object);
+				object1.add(object);
+				obj.put("boards",object1);
+				collection.save(obj);
 			}
 			catch (MongoException.DuplicateKey e) {
 	            System.out.println("Board already exists");
@@ -131,18 +142,18 @@ import com.mongodb.ServerAddress;
 			DBCollection collection = db.getCollection("users"); 
 			try
 			{
-				BasicDBObject object=new BasicDBObject();
-				
+				DBObject object;
+				DBObject query=new BasicDBObject("email",reg.getEmail());
+				object=collection.findOne(query);
+				System.out.println("firstnameis::"+reg.getFirstName());
 				object.put("firstname",reg.getFirstName());
 				object.put("lastname",reg.getLastName());
-				object.put("email", reg.getEmail());
 				object.put("sex", reg.getSex());
 				object.put("password", reg.getPassword());
-				object.put("cpassword", reg.getCpassword());
 
 				//object.put("verify", register.getEmail_Verified());
 
-				collection.insert(object);
+				collection.save(object);
 			}
 			catch (MongoException.DuplicateKey e) {
 	            System.out.println("Username already in use");
@@ -150,7 +161,69 @@ import com.mongodb.ServerAddress;
 			
 		}
 
-	}
+		public static  List getUserDetails(String email) {
+			// TODO Auto-generated method stub
+			DBCollection collection=db.getCollection("users");
+			System.out.print("insodde mongo method");
+			BasicDBList boardsList=null;
+			BasicDBObject query=new BasicDBObject("email",email);
+			DBObject obj=collection.findOne(query);
+			if(obj!=null){
+			boardsList =  (BasicDBList) obj.get("boards");
+				//DBCollection boardCol = db.getCollection("boards");
+				try{
+					if(!boardsList.isEmpty())	
+				
+				//System.out.println("the boardlist object ::: "+boardsList);	
+				for (int i=0;i<boardsList.size();i++){
+				System.out.println("the boardlist object ::: "+boardsList.get(i));
+				
+				}
+			}catch(NullPointerException e){
+				
+			}
+//				BasicDBList tilesList =  (BasicDBList) obj.get("tiles");
+//				for(Object element: boardsList) {
+//					   BasicDBList listIter = (BasicDBList)((BasicDBObject)element).get("tiles");
+//					   for(Object lit: listIter) {
+//					       System.out.println(lit);
+//					       //System.out.println(((BasicDBObject)lie).get("fromDate"));
+//					   }
+//					}
+				//System.out.println("the tiles are ::"+tilesList);
+			
+			
+			
+			
+		}
+			return  boardsList;
+		}
+
+		public void createTile(String email,String boardName,Tile tile) {
+			// TODO Auto-generated method stub
+			DBCollection collection=db.getCollection("users");
+			System.out.print("insodde mongo method");
+			BasicDBList boardsList=null;
+			BasicDBObject query=new BasicDBObject("boards.name",boardName);
+			DBObject obj= collection.findOne(query);
+			System.out.print("DB object is "+obj);
+			if(obj!=null){
+				BasicDBObject object=new BasicDBObject();
+				BasicDBList tiles=new BasicDBList();
+				object.put("descrition", tile.getDescription());
+				object.put("url",tile.getUrl());
+				tiles.add(object);
+				BasicDBObject updateCommand = new BasicDBObject( new BasicDBObject("boards.$.tiles", tiles));
+				//obj.put("boards.$.tiles",tiles);
+				collection.update(obj, updateCommand);
+				//collection.save(obj);
+				//DBCollection boardCol = db.getCollection("boards");
+					}
+				}
+			
+		}
+
+	
 		
 	
 	

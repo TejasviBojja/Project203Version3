@@ -171,7 +171,9 @@ function createBoard(){
 boardName= document.getElementById('boardname').value
 description= document.getElementById('boarddescription').value
 category= document.getElementById('boardcategory').value
-window.location.href="AddTile?name="+ name+"&description="+description+"&category="+category;
+<#list email as e>
+window.location.href="AddTile?email=${e}&name="+ boardName+"&description="+description+"&category="+category;
+</#list>
 }
 
 function FileUpload(){
@@ -182,10 +184,13 @@ $("#pickBoard_form").fadeIn(1000);
 }
 
 function PickBoard(){
+alert('Function caleed');
 ImageDescription= document.getElementById('imageDescription').value
 BoardCategory=document.getElementById('boardCategory').value
-window.location.href="register?name="+ namein +"&ampdescription="+description;
+
 }
+
+
 
 
 function imagedisplay(){
@@ -298,9 +303,9 @@ input[type="submit"] {
     <span style="float: right">
            <nav>
            <input id="uploadPin" type="button" name="fileUpload" value="Upload a Pin" onclick="popUpFile()">
-     
-           <ul id="navbar">
-           <li><a href="http://localhost:8080/MyTacks/LandingPage"><b>My Profile</b></a>
+    
+ 		   <ul id="navbar">
+           <li><a href="http://localhost:8080/MyTacks/LandingPage"><b></b></a>
 			<div>
 				<ul>
 					<li><a href="http://localhost:8080/MyTacks/LandingPage"><b>YOUR PROFILE</b></a></li>
@@ -315,6 +320,7 @@ input[type="submit"] {
         </nav>           
     </span>
     
+    
     <span style="float: center">
             <h1 align="center" style="font-family:lucida calligraphy;font-size:38px;position:absolute;left:550px; bottom:582px;margin:0; padding: 0px;color:white;"><b>MyTacks</b></h1>
     </span>
@@ -323,9 +329,20 @@ input[type="submit"] {
 <br>
 
 <div id="container2">
-<input id="brd1" type="button" class="button1" onclick="popUp()" style="float:left;height:300; width:175; background:white" value="Create a Board">
+
+<input id="brd1" type="button" class="button11" onclick="popUp()" style="float:left;height:300; width:200;margin-right:10px;margin-left:10px; background:white" value= "Create a Board">
 
 </div>
+<#list l as x>
+  
+ <#if x?has_content>
+<div id="container2">
+
+<input id="brd11" type="button" class="button11"  style="float:left;height:300; width:200;padding:15px;padding-right:15px; background:white;margin-left: 15px;margin-right: 15px;" value=  ${x.name}>
+
+</div>
+</#if>
+</#list>
 </div>
 
 </form>
@@ -363,10 +380,11 @@ input[type="submit"] {
 <table cellpadding="30">
 <tr>
 	<td>
-      <h3 >Category </h3>
+      <h3 >Name: </h3>	
+      <input type="textarea" name="name" id="boardCategory"  placeholder="Tell us about your image?" value="board1">
       <h3><label for="ImageEditDescription">Description</label></h3>
      
-      <input type="textarea" name="name" id="Imagedescription"  placeholder="Tell us about your image?" value="">
+      <input type="textarea" name="name" id="imageDescription"  placeholder="Tell us about your image?" value="">
     </td>
     <td align="right">
       <img id="mypic" src="neutral.jpg" height="200" width="200">  

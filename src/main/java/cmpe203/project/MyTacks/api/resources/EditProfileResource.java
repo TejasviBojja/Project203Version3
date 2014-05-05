@@ -33,13 +33,13 @@ import cmpe203.project.MyTacks.views.EditProfileView;
 		public Response verifyEditProfile(@FormParam("firstname") String firstName, @FormParam("lastname") String lastName,@FormParam("email") String email,@FormParam("sex") String sex,@FormParam("password") String password,@FormParam("cpassword") String cpassword) throws URISyntaxException
 		{
 			URI uri =new URI("http://localhost:8080/MyTacks/EditProfileSuccess");
+			System.out.println("firstnamae is::"+firstName);
 			Register register=new Register();
 			register.setFirstName(firstName);
-			register.setLastName(lastName);
 			register.setEmail(email);
+			register.setLastName(lastName);
 			register.setSex(sex);
 			register.setPassword(password);
-			register.setCpassword(cpassword);
 			//register.setEmail_Verified("no");
 			mongo test = new mongo();
 			test.editProfile(register);

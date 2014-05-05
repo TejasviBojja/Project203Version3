@@ -3,26 +3,44 @@ package cmpe203.project.MyTacks.views;
 import java.util.ArrayList;
 import java.util.List;
 
+import cmpe203.project.MyTacks.domain.Board;
+
 import com.yammer.dropwizard.views.View;
 
 
 public class LandingPageView extends View{
-	//List l=new ArrayList();
+	List email=new ArrayList();
+	List<Board> l=new ArrayList<Board>();
 	
-	public LandingPageView(String firstName) {
+	public LandingPageView(String email,List<Board> list) {
 		
 		super("/LandingPage.ftl");
-	//	l.add(firstName);
-	
-		
+		try{
+		this.l=list;
+		this.email.add(email);
+		}
+		catch(NullPointerException e){
+		//l.add("");
+		}
+			
 	}
-	/*public List getL() {
+
+	public List getEmail() {
+		return email;
+	}
+
+	public void setEmail(List email) {
+		this.email = email;
+	}
+
+	public List<Board> getL() {
 		return l;
 	}
-	public void setL(List l) {
+
+	public void setL(List<Board> l) {
 		this.l = l;
-	}*/
-	
+	}
+
 
 	
 	
