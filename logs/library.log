@@ -6867,3 +6867,835 @@ ERROR [2014-05-05 13:00:32,632] com.yammer.dropwizard.jersey.LoggingExceptionMap
 ! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
 ! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
 ! at java.lang.Thread.run(Unknown Source) [na:1.7.0_51]
+WARN  [2014-05-05 13:08:03,189] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-05 13:08:03,358] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-05 13:08:03,362] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-05 13:08:03,578] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-05 13:08:03,747] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+    GET     /MyTacks/CreateTile (cmpe203.project.MyTacks.api.resources.CreateTileResource)
+    GET     /MyTacks/AddTile (cmpe203.project.MyTacks.api.resources.AddTileResource)
+    GET     /MyTacks/AddTile/tile (cmpe203.project.MyTacks.api.resources.AddTileResource)
+
+INFO  [2014-05-05 13:08:03,747] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2014-05-05 13:08:04,529] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A HTTP GET method, public void cmpe203.project.MyTacks.api.resources.LandingPageResource.getLandingPage(java.lang.String), MUST return a non-void type.
+INFO  [2014-05-05 13:08:04,550] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2014-05-05 13:08:04,554] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+ERROR [2014-05-05 13:08:49,606] com.yammer.dropwizard.jersey.LoggingExceptionMapper: Error handling a request: 5c9844693ee6c60c
+! com.mongodb.MongoException: Cannot apply the positional operator without a corresponding query field containing an array.
+! at com.mongodb.CommandResult.getException(CommandResult.java:100) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.CommandResult.throwOnError(CommandResult.java:134) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector._checkWriteError(DBTCPConnector.java:142) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector.say(DBTCPConnector.java:183) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector.say(DBTCPConnector.java:155) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBApiLayer$MyCollection.update(DBApiLayer.java:349) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBCollection.update(DBCollection.java:177) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBCollection.update(DBCollection.java:208) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBCollection.update(DBCollection.java:220) ~[mongo-java-driver-2.10.1.jar:na]
+! at cmpe203.project.MyTacks.dao.mongo.createTile(mongo.java:218) ~[classes/:na]
+! at cmpe203.project.MyTacks.api.resources.AddTileResource.getTile(AddTileResource.java:42) ~[classes/:na]
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_51]
+! at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_51]
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_51]
+! at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.7.0_51]
+! at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.yammer.dropwizard.jersey.OptionalResourceMethodDispatchAdapter$OptionalRequestDispatcher.dispatch(OptionalResourceMethodDispatchAdapter.java:37) ~[dropwizard-core-0.6.2.jar:na]
+! at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:302) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1511) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1442) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) [jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) [javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) [metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Unknown Source) [na:1.7.0_51]
+WARN  [2014-05-05 18:45:15,369] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-05 18:45:15,550] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-05 18:45:15,555] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-05 18:45:15,783] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-05 18:45:15,970] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+    GET     /MyTacks/CreateTile (cmpe203.project.MyTacks.api.resources.CreateTileResource)
+    GET     /MyTacks/AddTile (cmpe203.project.MyTacks.api.resources.AddTileResource)
+    GET     /MyTacks/AddTile/tile (cmpe203.project.MyTacks.api.resources.AddTileResource)
+
+INFO  [2014-05-05 18:45:15,970] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2014-05-05 18:45:16,715] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A HTTP GET method, public void cmpe203.project.MyTacks.api.resources.LandingPageResource.getLandingPage(java.lang.String), MUST return a non-void type.
+INFO  [2014-05-05 18:45:16,735] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2014-05-05 18:45:16,738] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+WARN  [2014-05-05 18:47:26,897] com.mongodb.tcp: Exception executing isMaster command on /10.0.0.22:27017
+! java.io.IOException: couldn't connect to [/10.0.0.22:27017] bc:java.net.SocketTimeoutException: connect timed out
+! at com.mongodb.DBPort._open(DBPort.java:214) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBPort.go(DBPort.java:107) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBPort.go(DBPort.java:88) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBPort.findOne(DBPort.java:143) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBPort.runCommand(DBPort.java:148) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector.initDirectConnection(DBTCPConnector.java:548) [mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector.isMongosConnection(DBTCPConnector.java:372) [mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.Mongo.isMongosConnection(Mongo.java:627) [mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBCollection.findOne(DBCollection.java:723) [mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBCollection.findOne(DBCollection.java:669) [mongo-java-driver-2.10.1.jar:na]
+! at cmpe203.project.MyTacks.dao.mongo.verifyLogin(mongo.java:73) [classes/:na]
+! at cmpe203.project.MyTacks.api.resources.SignupResource.verifySignup(SignupResource.java:50) [classes/:na]
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_51]
+! at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_51]
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_51]
+! at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.7.0_51]
+! at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75) [jersey-server-1.17.1.jar:1.17.1]
+! at com.yammer.dropwizard.jersey.OptionalResourceMethodDispatchAdapter$OptionalRequestDispatcher.dispatch(OptionalResourceMethodDispatchAdapter.java:37) [dropwizard-core-0.6.2.jar:na]
+! at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:302) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1511) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1442) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) [jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) [javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) [metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:953) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1014) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Unknown Source) [na:1.7.0_51]
+WARN  [2014-05-05 18:47:36,905] com.mongodb.tcp: Exception executing isMaster command on /10.0.0.22:27017
+! java.io.IOException: couldn't connect to [/10.0.0.22:27017] bc:java.net.SocketTimeoutException: connect timed out
+! at com.mongodb.DBPort._open(DBPort.java:214) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBPort.go(DBPort.java:107) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBPort.go(DBPort.java:88) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBPort.findOne(DBPort.java:143) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBPort.runCommand(DBPort.java:148) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector.initDirectConnection(DBTCPConnector.java:548) [mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector.checkMaster(DBTCPConnector.java:527) [mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector.innerCall(DBTCPConnector.java:277) [mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector.call(DBTCPConnector.java:257) [mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBApiLayer$MyCollection.__find(DBApiLayer.java:310) [mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBApiLayer$MyCollection.__find(DBApiLayer.java:295) [mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBCollection.findOne(DBCollection.java:727) [mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBCollection.findOne(DBCollection.java:669) [mongo-java-driver-2.10.1.jar:na]
+! at cmpe203.project.MyTacks.dao.mongo.verifyLogin(mongo.java:73) [classes/:na]
+! at cmpe203.project.MyTacks.api.resources.SignupResource.verifySignup(SignupResource.java:50) [classes/:na]
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_51]
+! at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_51]
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_51]
+! at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.7.0_51]
+! at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75) [jersey-server-1.17.1.jar:1.17.1]
+! at com.yammer.dropwizard.jersey.OptionalResourceMethodDispatchAdapter$OptionalRequestDispatcher.dispatch(OptionalResourceMethodDispatchAdapter.java:37) [dropwizard-core-0.6.2.jar:na]
+! at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:302) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1511) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1442) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) [jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) [javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) [metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:953) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1014) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Unknown Source) [na:1.7.0_51]
+WARN  [2014-05-05 18:47:46,921] com.mongodb: emptying DBPortPool to /10.0.0.22:27017 b/c of error
+! java.io.IOException: couldn't connect to [/10.0.0.22:27017] bc:java.net.SocketTimeoutException: connect timed out
+! at com.mongodb.DBPort._open(DBPort.java:214) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBPort.go(DBPort.java:107) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBPort.call(DBPort.java:74) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector.innerCall(DBTCPConnector.java:286) [mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector.call(DBTCPConnector.java:257) [mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBApiLayer$MyCollection.__find(DBApiLayer.java:310) [mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBApiLayer$MyCollection.__find(DBApiLayer.java:295) [mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBCollection.findOne(DBCollection.java:727) [mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBCollection.findOne(DBCollection.java:669) [mongo-java-driver-2.10.1.jar:na]
+! at cmpe203.project.MyTacks.dao.mongo.verifyLogin(mongo.java:73) [classes/:na]
+! at cmpe203.project.MyTacks.api.resources.SignupResource.verifySignup(SignupResource.java:50) [classes/:na]
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_51]
+! at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_51]
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_51]
+! at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.7.0_51]
+! at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75) [jersey-server-1.17.1.jar:1.17.1]
+! at com.yammer.dropwizard.jersey.OptionalResourceMethodDispatchAdapter$OptionalRequestDispatcher.dispatch(OptionalResourceMethodDispatchAdapter.java:37) [dropwizard-core-0.6.2.jar:na]
+! at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:302) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1511) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1442) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) [jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) [javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) [metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:953) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1014) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Unknown Source) [na:1.7.0_51]
+ERROR [2014-05-05 18:47:46,982] com.yammer.dropwizard.jersey.LoggingExceptionMapper: Error handling a request: 7d8a222db01aab0c
+! com.mongodb.MongoException$Network: can't call something : /10.0.0.22:27017/myTacks
+! at com.mongodb.DBTCPConnector.innerCall(DBTCPConnector.java:295) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector.call(DBTCPConnector.java:257) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBApiLayer$MyCollection.__find(DBApiLayer.java:310) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBApiLayer$MyCollection.__find(DBApiLayer.java:295) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBCollection.findOne(DBCollection.java:727) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBCollection.findOne(DBCollection.java:669) ~[mongo-java-driver-2.10.1.jar:na]
+! at cmpe203.project.MyTacks.dao.mongo.verifyLogin(mongo.java:73) ~[classes/:na]
+! at cmpe203.project.MyTacks.api.resources.SignupResource.verifySignup(SignupResource.java:50) ~[classes/:na]
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_51]
+! at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_51]
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_51]
+! at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.7.0_51]
+! at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.yammer.dropwizard.jersey.OptionalResourceMethodDispatchAdapter$OptionalRequestDispatcher.dispatch(OptionalResourceMethodDispatchAdapter.java:37) ~[dropwizard-core-0.6.2.jar:na]
+! at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:302) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1511) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1442) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) [jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) [javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) [metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:953) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1014) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Unknown Source) [na:1.7.0_51]
+Caused by: ! java.io.IOException: couldn't connect to [/10.0.0.22:27017] bc:java.net.SocketTimeoutException: connect timed out
+! at com.mongodb.DBPort._open(DBPort.java:214) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBPort.go(DBPort.java:107) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBPort.call(DBPort.java:74) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector.innerCall(DBTCPConnector.java:286) ~[mongo-java-driver-2.10.1.jar:na]
+!... 54 common frames omitted
+WARN  [2014-05-05 18:48:20,936] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-05 18:48:21,108] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-05 18:48:21,112] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-05 18:48:21,323] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-05 18:48:21,498] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+    GET     /MyTacks/CreateTile (cmpe203.project.MyTacks.api.resources.CreateTileResource)
+    GET     /MyTacks/AddTile (cmpe203.project.MyTacks.api.resources.AddTileResource)
+    GET     /MyTacks/AddTile/tile (cmpe203.project.MyTacks.api.resources.AddTileResource)
+
+INFO  [2014-05-05 18:48:21,504] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2014-05-05 18:48:22,220] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A HTTP GET method, public void cmpe203.project.MyTacks.api.resources.LandingPageResource.getLandingPage(java.lang.String), MUST return a non-void type.
+INFO  [2014-05-05 18:48:22,239] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2014-05-05 18:48:22,243] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+WARN  [2014-05-05 18:50:57,280] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-05 18:50:57,474] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-05 18:50:57,478] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-05 18:50:57,697] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-05 18:50:57,890] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+    GET     /MyTacks/CreateTile (cmpe203.project.MyTacks.api.resources.CreateTileResource)
+    GET     /MyTacks/AddTile (cmpe203.project.MyTacks.api.resources.AddTileResource)
+    GET     /MyTacks/AddTile/tile (cmpe203.project.MyTacks.api.resources.AddTileResource)
+
+INFO  [2014-05-05 18:50:57,890] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2014-05-05 18:50:58,745] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A HTTP GET method, public void cmpe203.project.MyTacks.api.resources.LandingPageResource.getLandingPage(java.lang.String), MUST return a non-void type.
+INFO  [2014-05-05 18:50:58,764] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2014-05-05 18:50:58,768] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+ERROR [2014-05-05 18:51:42,894] com.yammer.dropwizard.jersey.LoggingExceptionMapper: Error handling a request: bd1fe16bb475c116
+! com.mongodb.MongoException: Cannot apply the positional operator without a corresponding query field containing an array.
+! at com.mongodb.CommandResult.getException(CommandResult.java:100) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.CommandResult.throwOnError(CommandResult.java:134) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector._checkWriteError(DBTCPConnector.java:142) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector.say(DBTCPConnector.java:183) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector.say(DBTCPConnector.java:155) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBApiLayer$MyCollection.update(DBApiLayer.java:349) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBCollection.update(DBCollection.java:177) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBCollection.update(DBCollection.java:208) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBCollection.update(DBCollection.java:220) ~[mongo-java-driver-2.10.1.jar:na]
+! at cmpe203.project.MyTacks.dao.mongo.createTile(mongo.java:218) ~[classes/:na]
+! at cmpe203.project.MyTacks.api.resources.AddTileResource.getTile(AddTileResource.java:42) ~[classes/:na]
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_51]
+! at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_51]
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_51]
+! at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.7.0_51]
+! at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.yammer.dropwizard.jersey.OptionalResourceMethodDispatchAdapter$OptionalRequestDispatcher.dispatch(OptionalResourceMethodDispatchAdapter.java:37) ~[dropwizard-core-0.6.2.jar:na]
+! at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:302) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1511) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1442) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) [jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) [javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) [metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Unknown Source) [na:1.7.0_51]
+WARN  [2014-05-05 18:56:16,681] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-05 18:56:16,856] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-05 18:56:16,860] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-05 18:56:17,128] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-05 18:56:17,327] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+    GET     /MyTacks/CreateTile (cmpe203.project.MyTacks.api.resources.CreateTileResource)
+    GET     /MyTacks/AddTile (cmpe203.project.MyTacks.api.resources.AddTileResource)
+    GET     /MyTacks/AddTile/tile (cmpe203.project.MyTacks.api.resources.AddTileResource)
+
+INFO  [2014-05-05 18:56:17,328] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2014-05-05 18:56:18,166] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A HTTP GET method, public void cmpe203.project.MyTacks.api.resources.LandingPageResource.getLandingPage(java.lang.String), MUST return a non-void type.
+INFO  [2014-05-05 18:56:18,187] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2014-05-05 18:56:18,190] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+ERROR [2014-05-05 18:57:04,299] com.yammer.dropwizard.jersey.LoggingExceptionMapper: Error handling a request: a1960a9c0bd98282
+! com.mongodb.MongoException: Cannot apply the positional operator without a corresponding query field containing an array.
+! at com.mongodb.CommandResult.getException(CommandResult.java:100) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.CommandResult.throwOnError(CommandResult.java:134) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector._checkWriteError(DBTCPConnector.java:142) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector.say(DBTCPConnector.java:183) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBTCPConnector.say(DBTCPConnector.java:155) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBApiLayer$MyCollection.update(DBApiLayer.java:349) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBCollection.update(DBCollection.java:177) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBCollection.update(DBCollection.java:208) ~[mongo-java-driver-2.10.1.jar:na]
+! at com.mongodb.DBCollection.update(DBCollection.java:220) ~[mongo-java-driver-2.10.1.jar:na]
+! at cmpe203.project.MyTacks.dao.mongo.createTile(mongo.java:219) ~[classes/:na]
+! at cmpe203.project.MyTacks.api.resources.AddTileResource.getTile(AddTileResource.java:42) ~[classes/:na]
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_51]
+! at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_51]
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_51]
+! at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.7.0_51]
+! at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.yammer.dropwizard.jersey.OptionalResourceMethodDispatchAdapter$OptionalRequestDispatcher.dispatch(OptionalResourceMethodDispatchAdapter.java:37) ~[dropwizard-core-0.6.2.jar:na]
+! at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:302) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1511) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1442) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) [jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) [javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) [metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Unknown Source) [na:1.7.0_51]
+WARN  [2014-05-05 19:06:58,714] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-05 19:06:58,881] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-05 19:06:58,885] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-05 19:06:59,095] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-05 19:06:59,268] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+    GET     /MyTacks/CreateTile (cmpe203.project.MyTacks.api.resources.CreateTileResource)
+    GET     /MyTacks/AddTile (cmpe203.project.MyTacks.api.resources.AddTileResource)
+    GET     /MyTacks/AddTile/tile (cmpe203.project.MyTacks.api.resources.AddTileResource)
+
+INFO  [2014-05-05 19:06:59,269] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2014-05-05 19:06:59,965] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A HTTP GET method, public void cmpe203.project.MyTacks.api.resources.LandingPageResource.getLandingPage(java.lang.String), MUST return a non-void type.
+INFO  [2014-05-05 19:06:59,987] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2014-05-05 19:06:59,990] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+WARN  [2014-05-05 19:10:09,462] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-05 19:10:09,636] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-05 19:10:09,641] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-05 19:10:09,854] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-05 19:10:10,030] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+    GET     /MyTacks/CreateTile (cmpe203.project.MyTacks.api.resources.CreateTileResource)
+    GET     /MyTacks/AddTile (cmpe203.project.MyTacks.api.resources.AddTileResource)
+    GET     /MyTacks/AddTile/tile (cmpe203.project.MyTacks.api.resources.AddTileResource)
+
+INFO  [2014-05-05 19:10:10,030] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2014-05-05 19:10:10,771] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A HTTP GET method, public void cmpe203.project.MyTacks.api.resources.LandingPageResource.getLandingPage(java.lang.String), MUST return a non-void type.
+INFO  [2014-05-05 19:10:10,791] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+WARN  [2014-05-05 19:10:10,795] org.eclipse.jetty.server.AbstractConnector: insufficient threads configured for SocketConnector@0.0.0.0:8081
+INFO  [2014-05-05 19:10:10,795] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+WARN  [2014-05-05 19:10:59,524] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-05-05 19:10:59,699] com.yammer.dropwizard.cli.ServerCommand: Starting mytacks-service
+INFO  [2014-05-05 19:10:59,704] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-05-05 19:10:59,919] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-05-05 19:11:00,103] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    POST    /MyTacks/signup (cmpe203.project.MyTacks.api.resources.SignupResource)
+    GET     /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    POST    /MyTacks/register (cmpe203.project.MyTacks.api.resources.RegisterResource)
+    GET     /MyTacks/home (cmpe203.project.MyTacks.api.resources.HomeResource)
+    GET     /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    POST    /MyTacks/ResetPassword (cmpe203.project.MyTacks.api.resources.ResetPasswordResource)
+    GET     /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    POST    /MyTacks/ResetPasswordEmail (cmpe203.project.MyTacks.api.resources.ResetPasswordEmailResource)
+    GET     /MyTacks/LandingPage (cmpe203.project.MyTacks.api.resources.LandingPageResource)
+    GET     /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    POST    /MyTacks/InviteFriend (cmpe203.project.MyTacks.api.resources.InviteFriendResource)
+    GET     /MyTacks/InviteFriendSuccess (cmpe203.project.MyTacks.api.resources.InviteFriendSuccessResource)
+    GET     /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    POST    /MyTacks/EditProfile (cmpe203.project.MyTacks.api.resources.EditProfileResource)
+    GET     /MyTacks/EditProfileSuccess (cmpe203.project.MyTacks.api.resources.EditProfileSuccessResource)
+    GET     /MyTacks/CreateBoard (cmpe203.project.MyTacks.api.resources.CreateBoardResource)
+    GET     /MyTacks/EditBoard (cmpe203.project.MyTacks.api.resources.EditBoardResource)
+    GET     /MyTacks/ResetPasswordSuccess (cmpe203.project.MyTacks.api.resources.ResetPasswordSuccessResource)
+    GET     /MyTacks/EmailConfirmSuccess (cmpe203.project.MyTacks.api.resources.EmailConfirmSuccessResource)
+    GET     /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    POST    /MyTacks/Activate (cmpe203.project.MyTacks.api.resources.ActivateEmailResource)
+    GET     /MyTacks/PasswordChangeSuccess (cmpe203.project.MyTacks.api.resources.PasswordChangeSuccessResource)
+    GET     /MyTacks/CreateTile (cmpe203.project.MyTacks.api.resources.CreateTileResource)
+    GET     /MyTacks/AddTile (cmpe203.project.MyTacks.api.resources.AddTileResource)
+    GET     /MyTacks/AddTile/tile (cmpe203.project.MyTacks.api.resources.AddTileResource)
+
+INFO  [2014-05-05 19:11:00,104] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2014-05-05 19:11:00,859] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A HTTP GET method, public void cmpe203.project.MyTacks.api.resources.LandingPageResource.getLandingPage(java.lang.String), MUST return a non-void type.
+INFO  [2014-05-05 19:11:00,878] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2014-05-05 19:11:00,882] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081

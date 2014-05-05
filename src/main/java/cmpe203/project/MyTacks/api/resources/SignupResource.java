@@ -54,12 +54,10 @@ public class SignupResource {
 		 uri=new URI("http://localhost:8080/MyTacks/LandingPage?firstName="+firstName);
 		}
 		if(value==2){
-			//Register register=mongo.getUserDetails(email);
-		
 			uri=new URI("http://localhost:8080/MyTacks/register");
 		}
 		return new LandingPageView(email,list);
-		//return null;
+	
 	}
 }
 

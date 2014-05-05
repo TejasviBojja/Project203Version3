@@ -31,7 +31,7 @@ import com.mongodb.ServerAddress;
 		public mongo() {
 			 
 			try {
-				mongoClient = new MongoClient(new ServerAddress("10.0.0.22" , 27017));
+				mongoClient = new MongoClient(new ServerAddress("172.20.10.4" , 27017));
 			} catch (UnknownHostException e) {				
 				e.printStackTrace();
 			}
@@ -117,8 +117,12 @@ import com.mongodb.ServerAddress;
 				object.put("description",description);
 				object.put("category", category);
 				object1.add(object);
-				obj.put("boards",object1);
-				collection.save(obj);
+				//obj.put("boards",object1);
+				BasicDBObject updateCommand = new BasicDBObject("$push", new BasicDBObject("boards",object ));
+				
+				//obj.put("boards.$.tiles",tiles);
+				collection.update(obj, updateCommand);
+				//collection.save(obj);
 			}
 			catch (MongoException.DuplicateKey e) {
 	            System.out.println("Board already exists");
@@ -210,10 +214,11 @@ import com.mongodb.ServerAddress;
 			if(obj!=null){
 				BasicDBObject object=new BasicDBObject();
 				BasicDBList tiles=new BasicDBList();
-				object.put("descrition", tile.getDescription());
+				object.put("description", tile.getDescription());
 				object.put("url",tile.getUrl());
 				tiles.add(object);
-				BasicDBObject updateCommand = new BasicDBObject( new BasicDBObject("boards.$.tiles", tiles));
+				BasicDBObject updateCommand = new BasicDBObject("$set", new BasicDBObject("tiles.$.description", tile.getDescription()));
+			
 				//obj.put("boards.$.tiles",tiles);
 				collection.update(obj, updateCommand);
 				//collection.save(obj);
