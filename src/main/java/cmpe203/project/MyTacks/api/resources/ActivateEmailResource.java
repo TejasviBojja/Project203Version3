@@ -19,7 +19,7 @@ import com.yammer.dropwizard.views.View;
 
 /**
  * To activate a user's account at MyTacks
- * QueryParam takes the parameter "activationlink" which includes the details of the user. 
+ * @QueryParam takes the parameter "activationlink" which includes the details of the user. 
  */
 @Path("/Activate")
 public class ActivateEmailResource {
