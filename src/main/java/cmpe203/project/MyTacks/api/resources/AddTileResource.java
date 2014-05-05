@@ -19,7 +19,7 @@ public class AddTileResource {
 	
 	}
 
-//To get the category
+//To get the category of board
 	@GET
 	public AddTileView getAddTile(@QueryParam("email") String email,@QueryParam("name") String boardName,@QueryParam("description") String description,@QueryParam("category") String category)
 	{
