@@ -42,7 +42,7 @@ public class Email {
 			 msgBody="Dear "+ firstname +", \n Thank you for registering with MyTacks!! \n Please click on the link below to activate your account \n  http://localhost:8080/MyTacks/Activate?activationlink="+firstname;
 			 break;
 		case 2:
-			msgBody="Hi! I am a user of MyTacks...\nI would like to invite you to join MyTacks..\nExplore it!! Collect, pin and share your fascination!! :D /nTo accept my invitation..please join MyTacks at  ";
+			msgBody="Hi! I am a user of MyTacks... \n I would like to invite you to join MyTacks.. \n Explore it!! Collect, pin and share your fascination!! :D /n To accept my invitation..please join MyTacks at /nTo accept my invitation..please join MyTacks at \n http://localhost:8080/MyTacks/home ";
 			break;
 		case 3:
 			msgBody="Please click on the below link to reset your password http://localhost:8080/MyTacks/ResetPasswordEmail?id="+email;
