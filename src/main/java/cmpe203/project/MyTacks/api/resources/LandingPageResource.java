@@ -7,14 +7,12 @@ import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-//import javax.ws.rs.QueryParam;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 
 
 import cmpe203.project.MyTacks.dao.mongo;
-//import cmpe203.project.MyTacks.views.HomeView;
 import cmpe203.project.MyTacks.views.LandingPageView;
 
 //public class LandingPageResource {
@@ -29,18 +27,13 @@ public class LandingPageResource {
 	}
 
 	@GET
-<<<<<<< HEAD
-	public LandingPageView getLandingPage()
+
+	public LandingPageView getLandingPage(@QueryParam("firstName") String firstName)
 	{
-	
-			return new LandingPageView();
-=======
-	public LandingPageView getLandingPage(@QueryParam("name") String firstName)
-	{
-		firstName=""+firstName;
+		
 		return new LandingPageView(firstName);
 
->>>>>>> d31a701e537c9f1c2ede37643af41c2e16f47a25
+
 	}
 	
 

@@ -33,7 +33,6 @@ public class SignupResource {
 	}
 	
 @POST
-	
 	public Response verifySignup(@FormParam("email") String email, @FormParam("password") String password) throws URISyntaxException
 	{
 		
@@ -46,8 +45,8 @@ public class SignupResource {
 		int value=test.verifyLogin(signup);
 		System.out.println("value in signup class is ::"+value);
 		if(value==1){
-		 String name= test.getFirstName(email);
-		 uri=new URI("http://localhost:8080/MyTacks/LandingPage?name");
+		 String firstName= test.getFirstName(email);
+		 uri=new URI("http://localhost:8080/MyTacks/LandingPage?firstName="+firstName);
 		}
 		if(value==2)
 			uri=new URI("http://localhost:8080/MyTacks/register");

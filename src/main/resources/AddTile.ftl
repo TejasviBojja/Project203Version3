@@ -297,7 +297,7 @@ input[type="submit"]
            
            <ul id="navbar">
                     
-           <li><a href="http://localhost:8080/MyTacks/LandingPage"><b>TEJASVI BOJJA</b></a>
+           <li><a href="http://localhost:8080/MyTacks/LandingPage"><b>${boardName?html}</b></a>
 			<div>
 				<ul>
 					<li><a href="http://localhost:8080/MyTacks/LandingPage"><b>YOUR PROFILE</b></a></li>
