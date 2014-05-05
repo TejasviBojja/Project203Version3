@@ -74,6 +74,26 @@ $(window).bind('resize',positionPopup);
 </script>
 
 <style>
+
+#navbar{
+width: 60%;
+height: 100%;
+color: blue;
+float: left;
+font-size: 14px;
+margin-top: 0px;
+padding-left: 0px;
+}
+#uploadPin{
+float: left;
+height: 100%;
+width: 30%;
+color: blue;
+font-size: 15px;
+background-color: black;
+}
+
+
 #overlay_form{
 position: absolute;
 border: 5px solid lightblue;
@@ -196,8 +216,6 @@ font-size: 12px;
 font-weight: bold; 
 color: #003366
 border: #00ffff;
-border-style: dashed;
-border-width: 5px;
 border-color:yellow;
 background-image:url(https://cdn3.iconfinder.com/data/icons/buttons/512/Icon_11-128.png);
 }
@@ -216,7 +234,7 @@ background-image:url(https://cdn3.iconfinder.com/data/icons/buttons/512/Icon_11-
    display: block;
    padding: 15px 100px;
    background-color:black;
-   color: red;
+   color: white;
    text-decoration: none;
    width:127px }
 #navbar li ul {
@@ -236,12 +254,12 @@ background-image:url(https://cdn3.iconfinder.com/data/icons/buttons/512/Icon_11-
    display:block;
    background: #fff;
    border-bottom: 1px solid #fff;
-   color: red;
+   color: Blue;
    width:120px;
    margin:0;
     }
 #navbar li li a:hover {
-   background-color: #200000 ; 
+   background-color: #E2E1F2; 
    }
 body
 {
@@ -262,9 +280,9 @@ input[type="submit"] {
 <body>
 <form id="Landing_Page" action=" " method="post">
 <div id="container">
-<input type="button" name="Create Board" value="Create Board" onclick="popUp()">
 
-<input type="button" name="fileUpload" value="+" onclick="popUpFile()">
+
+
 
 
 <div id="header" style="color:red;border:1px solid white;background-image: url(http://www.owningpink.com/sites/default/files/images/wp/2010/01/colorful_dots.jpg); text-align=center; height:50px; width=100%">
@@ -278,11 +296,11 @@ input[type="submit"] {
     </div>
     
     <span style="float: right">
-           <nav> 
-          
+           <nav>
+           <input id="uploadPin" type="button" name="fileUpload" value="Upload a Pin" onclick="popUpFile()">
+     
            <ul id="navbar">
-                   
-           <li><a href="http://localhost:8080/MyTacks/LandingPage"><b></b></a>
+           <li><a href="http://localhost:8080/MyTacks/LandingPage"><b>My Profile</b></a>
 			<div>
 				<ul>
 					<li><a href="http://localhost:8080/MyTacks/LandingPage"><b>YOUR PROFILE</b></a></li>
@@ -301,24 +319,15 @@ input[type="submit"] {
             <h1 align="center" style="font-family:lucida calligraphy;font-size:38px;position:absolute;left:550px; bottom:582px;margin:0; padding: 0px;color:white;"><b>MyTacks</b></h1>
     </span>
 </div>  
-</div>
+
 <br>
 
 <div id="container2">
-
-<div id="center" style="border:2px solid white;background-image: url(http://en.clipdealer.com/preview/image/000/385/426/previews/4--385426-Particle%20party%20on%20white%20background.jpg);background-size: cover; background-position: center center; background-repeat: no-repeat;background-attachment: fixed;width:50%; height:205px;position:absolute;>
-<style="text-align:right;left:250px; bottom:356px;font-size=200px;"><img src="http://www.websigmas.com/wp-content/uploads/2013/03/Pinterest.jpg"  "width=100%; height=200px; border="2";>
-<h1 style="color:#400000 ; position:absolute;top:20px;left:210px;"><b></b></h1>
-</div>
-
-&nbsp  <div id="center1" style="border:2px solid white;background-image: url(http://en.clipdealer.com/preview/image/000/385/426/previews/4--385426-Particle%20party%20on%20white%20background.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat;background-attachment: fixed;position:absolute; right:350px;width:22%; height:205px;bottom:355px;">
-<h1 style="font-size:20px;">Pins from:</h1>
-<button style= width:15%; height:25% ;">
-<img src="http://www.websigmas.com/wp-content/uploads/2013/03/Pinterest.jpg" width="50%";height="25%"; />
-</button>
 <input id="brd1" type="button" class="button1" onclick="popUp()" style="float:left;height:300; width:175; background:white" value="Create a Board">
+
 </div>
 </div>
+
 </form>
 
 
