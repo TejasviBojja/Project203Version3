@@ -19,6 +19,7 @@ import com.yammer.dropwizard.views.View;
 
 /**
  * To activate a user's account at MyTacks
+ * QueryParam takes the parameter "activationlink" which includes the details of the user. 
  */
 @Path("/Activate")
 public class ActivateEmailResource {
@@ -37,6 +38,7 @@ public class ActivateEmailResource {
 	
 /**
  * Switch to Login Page after successful activation of account
+ * Once the activation link sent to user's email is verified, then it goes to "/login" to login to the portal
  */
 	@POST
 	public Response goToLogin() throws URISyntaxException
