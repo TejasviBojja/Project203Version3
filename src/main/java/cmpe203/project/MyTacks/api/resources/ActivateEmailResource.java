@@ -17,6 +17,7 @@ import cmpe203.project.MyTacks.views.ActivateEmailView;
 
 import com.yammer.dropwizard.views.View;
 
+//To activate a user's account at MyTacks
 @Path("/Activate")
 public class ActivateEmailResource {
 
@@ -32,7 +33,7 @@ public class ActivateEmailResource {
 	
 	}
 	
-	
+//Switch to Login Page after successful activation of account	
 	@POST
 	public Response goToLogin() throws URISyntaxException
 	{
