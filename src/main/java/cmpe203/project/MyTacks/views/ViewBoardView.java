@@ -1,0 +1,30 @@
+package cmpe203.project.MyTacks.views;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import cmpe203.project.MyTacks.domain.Tile;
+
+import com.yammer.dropwizard.views.View;
+
+
+public class ViewBoardView extends View{
+	
+	List<Tile> tile=new ArrayList<Tile>();
+	
+	
+	public ViewBoardView(List<Tile> tile){
+		super("/ViewBoard.ftl");
+		this.tile=tile;
+	}
+
+	public List<Tile> getTile() {
+		return tile;
+	}
+
+	public void setTile(List<Tile> tile) {
+		this.tile = tile;
+	}
+
+	
+}

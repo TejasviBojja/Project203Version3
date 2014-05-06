@@ -168,7 +168,7 @@ import com.mongodb.ServerAddress;
 		public static  List getUserDetails(String email) {
 			// TODO Auto-generated method stub
 			DBCollection collection=db.getCollection("users");
-			System.out.print("insodde mongo method");
+			System.out.print("inside mongo method");
 			BasicDBList boardsList=null;
 			BasicDBObject query=new BasicDBObject("email",email);
 			DBObject obj=collection.findOne(query);
@@ -204,9 +204,7 @@ import com.mongodb.ServerAddress;
 		}
 
 		public void createTile(String email,String boardName,Tile tile) {
-			// TODO Auto-generated method stub
 			DBCollection collection=db.getCollection("users");
-			System.out.print("insodde mongo method");
 			BasicDBList boardsList=null;
 			BasicDBObject query=new BasicDBObject("boards.name",boardName);
 			DBObject obj= collection.findOne(query);
@@ -214,17 +212,41 @@ import com.mongodb.ServerAddress;
 			if(obj!=null){
 				BasicDBObject object=new BasicDBObject();
 				BasicDBList tiles=new BasicDBList();
+				object.put("name", boardName);
 				object.put("description", tile.getDescription());
 				object.put("url",tile.getUrl());
 				tiles.add(object);
-				BasicDBObject updateCommand = new BasicDBObject("$set", new BasicDBObject("tiles.$.description", tile.getDescription()));
+			//	BasicDBObject updateCommand = new BasicDBObject("$set", new BasicDBObject("tiles.$.description", tile.getDescription()));
 			
-				//obj.put("boards.$.tiles",tiles);
-				collection.update(obj, updateCommand);
-				//collection.save(obj);
+				obj.put("tiles",tiles);
+				//collection.update(obj, updateCommand);
+				collection.save(obj);
 				//DBCollection boardCol = db.getCollection("boards");
 					}
 				}
+
+		public List viewBoard(String boardName) {
+			
+			
+			DBCollection collection=db.getCollection("users");
+			BasicDBList tilesList=new BasicDBList();
+			BasicDBObject query=new BasicDBObject("tiles.name",boardName);
+			DBObject obj= collection.findOne(query);
+			
+			
+			//	BasicDBObject obj=(BasicDBObject) cur.next();
+				//System.out.print("object in getting tiles is "+obj);
+			if(obj!=null){
+			BasicDBList tile=(BasicDBList) obj.get("tiles");
+				//tilesList.add(tile);
+				for(int i=0;i<tile.size();i++){
+				BasicDBObject b=(BasicDBObject) tile.get(i);
+				if(b.get("name").equals(boardName))
+					System.out.println(b.get("name"));
+					tilesList.add(b);
+				}
+			}return tilesList;
+		}
 			
 		}
 

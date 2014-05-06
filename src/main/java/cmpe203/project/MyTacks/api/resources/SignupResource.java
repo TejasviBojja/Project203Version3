@@ -1,6 +1,6 @@
 package cmpe203.project.MyTacks.api.resources;
 
-//import cmpe203.project.MyTacks.dao.DatabaseConnection;
+
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -21,7 +21,7 @@ import cmpe203.project.MyTacks.views.SignupView;
 @Path("/signup")
 public class SignupResource {
 
-	//DatabaseConnection db;
+	
 	
 	public SignupResource()
 	{
@@ -42,7 +42,7 @@ public class SignupResource {
 		URI uri=new URI("http://localhost:8080/MyTacks/home");
 		mongo test = new mongo();
 		 int count=0;
-		 List list=null;
+		List list=null;
 		String firstName="";
 		Signup signup=new Signup();
 		signup.setEmail(email);

@@ -54,15 +54,23 @@
 		
 </script>
 </head>
-<style type="text/css" >
-body
-{
-background:url(http://i.images.cdn.fotopedia.com/f99mkad2ks77v-YUeOYrzK5hI-hd/Bridges/Wooden_bridge_in_a_park.jpg) no-repeat ;
-}
-</style>
+<style>	
+	body
+	{
+	background:url('http://www.murraymac.net/GeneralImages/DarkBlueBackground.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: 'Helvetica Neue';
+	color:white;
+	font-weight:100;
+	font-size:11px;
+	}
+	</style>
 <form id="Registerform" action="" onsubmit="return( validateFirstname()&& validateLastname() && validateEmail() && validatePassword()  && validateCpassword())" method="post" >
 <div style="width:500px;border:5px solid black; margin:0 auto;" >
-<h3 align="center" style="font-family:lucida calligraphy;font-size:30px;color:black">Sign Up With Email</h3>
+<h3 align="center" style="font-size:30px;color:white">Sign Up With Email</h3>
 
 <table cellpadding="8" align="center">
     <tr>
@@ -101,7 +109,7 @@ background:url(http://i.images.cdn.fotopedia.com/f99mkad2ks77v-YUeOYrzK5hI-hd/Br
     </tr>
   
 </table>
-<input type="submit" style="background-color:red;width:85;height:35" value="Register :)"><br><br>
+<input type="submit" style="background-color:#999999;width:85;height:35" value="Register"><br><br>
 </form>
 </div>
 </html>

@@ -63,7 +63,6 @@ $("#Main_page").fadeOut(1000);
 }
 
 function PickBoard(){
-alert('Function caleed');
 ImageDescription= document.getElementById('imageDescription').value
 BoardCategory=document.getElementById('boardCategory').value
 window.location.href="AddTile/tile?boardName="+ BoardCategory +"&description="+ImageDescription+"&url="+ImageURL+"&email=deepthibrndvnm@gmail.com";
@@ -203,7 +202,8 @@ input[type="submit"]
 <tr>
 	<td>
       <h3 >Category </h3>
-            <input type="textarea" name="name" id="boardCategory"  placeholder="Tell us about your image?" value="board1">
+      <input type="text" id="boardcategory" value="">
+      
       <h3><label for="ImageEditDescription">Description</label></h3>
      
       <input type="textarea" name="name" id="imageDescription"  placeholder="Tell us about your image?" value="">
@@ -334,11 +334,6 @@ input[type="submit"]
 <#list board as b>
 <h1><center>${b.boardName}</center><h1>
 <h3><center>${b.description}</center><h3>
-<div id="center" style="border:2px solid white;width:90%; height:67px;position:absolute;left:60px;">
-	<style="text-align:right;left:250px; bottom:356px;font-size=200px;"><img src="http://www.websigmas.com/wp-content/uploads/2013/03/Pinterest.jpg"  "width=50%; height=65px; border="2";>
-	<p style="color:#400000 ; position:absolute;top:10px;left:77px;font-size:20px;"><b>My Profile</b></p>
- 	<input type="button"  onclick="popUp()" style="border:2px solid black; height:50; width:100px; position:absolute; left:700px;bottom:7px;" value="Edit Board"/>
- </div>
  </#list>
  <br>
  <br>

@@ -12,6 +12,141 @@
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
  
+<style>
+
+#navbar{
+width: 60%;
+height: 100%;
+color: blue;
+float: left;
+font-size: 14px;
+margin-top: 0px;
+padding-left: 0px;
+}
+#uploadPin{
+float: left;
+height: 100%;
+width: 30%;
+color: white;
+font-size: 15px;
+background-color: 000066;
+}
+
+
+#overlay_form{
+position: absolute;
+border: 5px solid lightblue;
+padding: 10px;
+background: white;
+width: 500px;
+height: 370px;
+z-index: 200;
+}
+
+#upload_form{
+position: absolute;
+border: 5px solid lightblue;
+padding: 10px;
+background: white;
+width: 450px;
+height: 200px;
+z-index: 200;
+}
+
+#pickB_form{
+position: absolute;
+border: 5px solid lightblue;
+padding: 10px;
+background: white;
+width: 500px;
+height: 400px;
+z-index: 200;
+}
+.popup{
+    border-radius: 7px;
+    background:#6b6a63;
+    margin:30px auto 0;
+    padding:6px;  
+    // here it comes
+    position:absolute;
+    width:800px;
+    top: 20%;
+    left: 60%;
+    margin-left: -400px; // 1/2 width
+    margin-top: -40px; // 1/2 height
+}
+
+.button1 {
+font-family:Helvetica; 
+font-size: 12px; 
+font-weight: bold; 
+color: #003366
+border: #00ffff;
+border-color:000066;
+background-image:url(https://cdn3.iconfinder.com/data/icons/buttons/512/Icon_11-128.png);
+}
+
+/* These styles create the dropdown menus. */
+#navbar {
+   margin: 0;
+   padding: 0;
+   height: 3em;
+    }
+#navbar li {
+   list-style: none;
+   position:relative;
+   float: left; }
+#navbar li a {
+   display: block;
+   padding: 15px 100px;
+   background-color:000066;
+   color: white;
+   text-decoration: none;
+   width:127px }
+#navbar li ul {
+   display: none; 
+   /*width: 0em;*/ /* Width to help Opera out */
+   background-color: black;}
+#navbar li:hover ul, #navbar li.hover ul {
+   display: block;
+   position: absolute;
+   margin: 0;
+   padding: 4px;
+    }
+#navbar li:hover li, #navbar li.hover li {
+   float: right; }
+#navbar li:hover li a, #navbar li.hover li a {
+   background-color: white;
+   display:block;
+   background: #fff;
+   border-bottom: 1px solid #fff;
+   color: black;
+   width:120px;
+   margin:0;
+    }
+#navbar li li a:hover {
+   background-color: #E2E1F2; 
+   }
+
+input[type="submit"] {
+  background:000066;
+  color: white;
+  height: 50;
+  width: 100;
+  font-size:20px;
+}
+
+body{
+background-image: url(http://4.bp.blogspot.com/-gIiRpbSq8Tw/UWzNkCVJ21I/AAAAAAAAALM/f7KFxxqdgIE/s1600/cork+board.jpg);
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+font-family: 'Helvetica Neue';
+}
+
+
+</style>
 <script>
  $(function() {
     var availableCategories = [
@@ -75,15 +210,7 @@ $(window).bind('resize',positionPopup);
 
 <style>
 
-#navbar{
-width: 60%;
-height: 100%;
-color: blue;
-float: left;
-font-size: 14px;
-margin-top: 0px;
-padding-left: 0px;
-}
+
 #uploadPin{
 float: left;
 height: 100%;
@@ -133,6 +260,7 @@ var category;
 var ImageURL;
 var ImageDescription;
 var BoardCategory;
+var board;
 
 function popUp(){
 $("#overlay_form").fadeIn(1000);
@@ -183,10 +311,16 @@ $("#pickBoard_form").fadeIn(1000);
 
 }
 
+function viewBoard(){
+var board=document.getElementById('brd11').value;
+alert(board);
+window.location.href="ViewBoard?boardName="+board;
+}
+
 function PickBoard(){
-alert('Function caleed');
 ImageDescription= document.getElementById('imageDescription').value
 BoardCategory=document.getElementById('boardCategory').value
+window.location.href="AddTile/tile?boardName="+ BoardCategory +"&description="+ImageDescription+"&url="+ImageURL+"&email=deepthibrndvnm@gmail.com";
 
 }
 
@@ -305,7 +439,7 @@ input[type="submit"] {
            <input id="uploadPin" type="button" name="fileUpload" value="Upload a Pin" onclick="popUpFile()">
     
  		   <ul id="navbar">
-           <li><a href="http://localhost:8080/MyTacks/LandingPage"><b></b></a>
+           <li><a href="http://localhost:8080/MyTacks/LandingPage"><b>My Profile</b></a>
 			<div>
 				<ul>
 					<li><a href="http://localhost:8080/MyTacks/LandingPage"><b>YOUR PROFILE</b></a></li>
@@ -322,7 +456,7 @@ input[type="submit"] {
     
     
     <span style="float: center">
-            <h1 align="center" style="font-family:lucida calligraphy;font-size:38px;position:absolute;left:550px; bottom:582px;margin:0; padding: 0px;color:white;"><b>MyTacks</b></h1>
+                  <h1 align="center" style="font-size:38px;position:absolute;left:550px; bottom:580px;margin:0; padding: 0px;color:white;"><b>MyTacks</b></h1>
     </span>
 </div>  
 
@@ -330,15 +464,14 @@ input[type="submit"] {
 
 <div id="container2">
 
-<input id="brd1" type="button" class="button11" onclick="popUp()" style="float:left;height:300; width:200;margin-right:10px;margin-left:10px; background:white" value= "Create a Board">
+<input id="brd1" type="button" class="button11" onclick="popUp()" style="border-radius:5px;margin-top: 15px;margin-bottom: 15px;float:left;height:300; width:200;margin-right:10px;margin-left:10px; background:white" value= "Create a Board">
 
 </div>
-<#list l as x>
-  
+<#list l as x> 
  <#if x?has_content>
 <div id="container2">
 
-<input id="brd11" type="button" class="button11"  style="float:left;height:300; width:200;padding:15px;padding-right:15px; background:white;margin-left: 15px;margin-right: 15px;" value=  ${x.name}>
+<input id="brd11" type="button" class="button11"  onclick="viewBoard()" style="border-radius:5px;float:left;height:300; width:200;padding:15px;padding-right:15px; background:white;margin-left: 15px;margin-right: 15px;margin-top: 15px;margin-bottom: 15px;" value=${x.name}>
 
 </div>
 </#if>

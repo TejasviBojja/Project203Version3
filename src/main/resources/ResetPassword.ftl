@@ -17,8 +17,19 @@
 </script>
 </body>
 <form id="RPform" action="" onsubmit="return(validateEmail())" method="post">
-<div style=" text-align:center;background-image: url(http://www.thegardenglove.com/wp-content/uploads/2013/04/organic-gardening-3.jpg) ; height:400px; width: 500px; border: 1px solid black; margin:0 auto;">
-<h3 align="center" style="font-family:lucida calligraphy;font-size:50px;color:red">Reset Password<h3>
+
+<style>
+body
+{
+background:url(http://hd.wallpaperswide.com/thumbs/light_background-t2.jpg);
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+</style>
+
+<center><input type="submit" style="background:#14293D;color:white;width:120;height:35" value="Reset Password"></center>
 
 <table cellpadding="8" align="center">
  	<tr>

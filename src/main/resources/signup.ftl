@@ -25,9 +25,19 @@
 </script>
 </body>
 <form id="Loginform" action="" onsubmit="return(validateEmail()&& validatePassword())" method="post">
-<div style=" text-align:center;background-image: url(http://www.thegardenglove.com/wp-content/uploads/2013/04/organic-gardening-3.jpg) ; height:400px; width: 500px; border: 1px solid black; margin:0 auto;">
-<h3 align="center" style="font-family:lucida calligraphy;font-size:50px;color:red">Log In<h3>
-
+<style>	
+	body
+	{
+	background:url('http://www.murraymac.net/GeneralImages/DarkBlueBackground.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: 'Helvetica Neue';
+	}
+	</style>
+<h1 align="center" style="color:white">MyTacks Log In</h1>
+<br><br><br><br>
 <table cellpadding="8" align="center">
  	<tr>
  	
@@ -39,8 +49,8 @@
       <td align="left">:<input type="password" height="30" name="password" placeholder="Password" style="border:2px solid white"><br></td>
     </tr>
    </table>
-  <br> <font color="white">Forgot Password?</font><a href="http://localhost:8080/MyTacks/ResetPassword">Reset Password !</a> <br><br>
-<input type="submit" value="Log In">
+  <br><i><center> <font color=red>Forgot Password?</font></i><a href="http://localhost:8080/MyTacks/ResetPassword">Reset Password !</a> </center><br>
+<center><input type="submit" value="Log In"></center>
 </form>
 </div>
 </html>

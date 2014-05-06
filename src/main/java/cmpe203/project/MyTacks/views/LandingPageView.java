@@ -20,7 +20,8 @@ public class LandingPageView extends View{
 		this.email.add(email);
 		}
 		catch(NullPointerException e){
-		//l.add("");
+			System.out.print("board is null");
+		this.l.add(new Board());
 		}
 			
 	}
