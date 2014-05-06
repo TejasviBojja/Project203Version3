@@ -14,6 +14,9 @@ import cmpe203.project.MyTacks.views.HomeView;
 import cmpe203.project.MyTacks.views.ResetPasswordEmailView;
 import cmpe203.project.MyTacks.views.ResetPasswordView;
 
+/** 
+ * This class allows the user to reset his/her password
+ */
 @Path("/ResetPassword")
 public class ResetPasswordResource {
 
@@ -22,13 +25,21 @@ public class ResetPasswordResource {
 	{
 	
 	}
-
+	
+	/** 
+	 * This method calls the view allowing the user to change password
+	 */
 	@GET
 	public ResetPasswordView getHome()
 	{
 		return new ResetPasswordView();
 	}
 	
+	/**
+	 * This method post will send the reset password link to user's mail id
+	 * @FormParam takes email and sends the reset password link to this mail id
+	 * This link on click will allow the user to reset his password of MyTacks
+	 */
 	@POST
 	public Response resetPassword(@FormParam("email") String email) throws URISyntaxException
 	{

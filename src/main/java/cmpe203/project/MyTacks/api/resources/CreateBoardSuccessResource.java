@@ -15,13 +15,15 @@ import cmpe203.project.MyTacks.views.CreateBoardSuccessView;
 
 public class CreateBoardSuccessResource {
 
+//On successful creation of board
 	@Path("/CreateBoardSuccess")
 	public class CreateBoardResource {
 		public CreateBoardResource()
 		{
 		
 		}
-
+		
+//Get the view of successful creation of board
 		@GET
 		public CreateBoardSuccessView getEditProfileSuccess()
 		{

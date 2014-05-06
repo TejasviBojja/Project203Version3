@@ -16,10 +16,16 @@ import cmpe203.project.MyTacks.views.ResetPasswordEmailView;
 
 import com.yammer.dropwizard.views.View;
 
+/** 
+ * This class will allow the user to reset or change his password
+ */
 @Path("/ResetPasswordEmail")
 public class ResetPasswordEmailResource {
 	
-	
+	/**
+	 * This method calls for the view for resetting the password
+	 * @QueryParam takes email as a query parameter and sends the password change link to the user's email id
+	 */
 	@GET
 	public View getVerifiedView(@QueryParam("id") String email)
 	{
@@ -29,6 +35,9 @@ public class ResetPasswordEmailResource {
 		
 	}
 
+	/**
+	 * This method will make a call to reset the password and store the updated new password into mongo DB
+	 */
 	@POST
 	public Response resetPassword(@QueryParam("id") String email,@FormParam("password") String password) throws URISyntaxException
 	{

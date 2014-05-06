@@ -6,7 +6,10 @@ import java.util.List;
 import cmpe203.project.MyTacks.domain.Board;
 
 import com.yammer.dropwizard.views.View;
-
+/**
+ * This class allows for a user to add tiles to this account through this view page 
+ */
+ 
 public class AddTileView extends View {
 
 	private List<Board> board=new ArrayList<Board>();
