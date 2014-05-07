@@ -3,6 +3,9 @@ package cmpe203.project.MyTacks.domain;
 public class Board {
 
 	private String boardName;
+	private String category;
+	private String description;
+	
 	public String getBoardName() {
 		return boardName;
 	}
@@ -21,7 +24,6 @@ public class Board {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	private String category;
-	private String description;
+	
 	
 }

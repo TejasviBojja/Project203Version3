@@ -3,11 +3,11 @@
 <head>
 <body>
 <form id="Board_view" action=" " method="post">
-<#list tile as t>
+<#list board as b>
 <div id="container">
     
     <span style="float: left;">
-       <image src=${t.url}>
+       <h4>${b.name}<h4>
     </span>
     </div>
     </#list>

@@ -31,7 +31,7 @@ import com.mongodb.ServerAddress;
 		public mongo() {
 			 
 			try {
-				mongoClient = new MongoClient(new ServerAddress("172.20.10.4" , 27017));
+				mongoClient = new MongoClient(new ServerAddress("10.0.0.20" , 27017));
 			} catch (UnknownHostException e) {				
 				e.printStackTrace();
 			}
@@ -48,7 +48,6 @@ import com.mongodb.ServerAddress;
 			{
 				BasicDBObject object=new BasicDBObject();
 				object.put("firstname",register.getFirstName());
-
 				object.put("lastname",register.getLastName());
 				object.put("email", register.getEmail());
 				object.put("sex", register.getSex());
@@ -64,6 +63,28 @@ import com.mongodb.ServerAddress;
 		
 
 	}
+		
+		public Register getDetails(String email)
+		{
+			Register register= new Register();
+			DBCollection collection=db.getCollection("users");
+			DBObject query=new BasicDBObject("email",email);
+			DBObject obj=collection.findOne(query);
+			if(obj!=null)
+			{
+				String var=obj.get("password").toString();
+			register.setPassword(var);
+			register.setEmail(email);
+			register.setFirstName(obj.get("firstname").toString());
+			register.setLastName(obj.get("lastname").toString());
+			
+			
+			}
+	return register;		
+	}
+		
+		
+		
 		public int verifyLogin(Signup signup)
 		{
 			int value=0;
@@ -73,7 +94,6 @@ import com.mongodb.ServerAddress;
 			DBObject obj=collection.findOne(query);
 			if(obj!=null)
 			{
-			
 			String password1=obj.get("password").toString();
 			if(!obj.get("verify").toString().equals("yes"))
 				value=2;
@@ -166,7 +186,6 @@ import com.mongodb.ServerAddress;
 		}
 
 		public static  List getUserDetails(String email) {
-			// TODO Auto-generated method stub
 			DBCollection collection=db.getCollection("users");
 			System.out.print("inside mongo method");
 			BasicDBList boardsList=null;

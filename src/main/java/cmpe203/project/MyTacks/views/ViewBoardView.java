@@ -3,28 +3,30 @@ package cmpe203.project.MyTacks.views;
 import java.util.ArrayList;
 import java.util.List;
 
-import cmpe203.project.MyTacks.domain.Tile;
+import cmpe203.project.MyTacks.domain.Board;
 
 import com.yammer.dropwizard.views.View;
 
 
 public class ViewBoardView extends View{
 	
-	List<Tile> tile=new ArrayList<Tile>();
+	List<Board> board=new ArrayList<Board>();
 	
 	
-	public ViewBoardView(List<Tile> tile){
+	public ViewBoardView(List board){
 		super("/ViewBoard.ftl");
-		this.tile=tile;
+		this.board=board;
 	}
 
-	public List<Tile> getTile() {
-		return tile;
+
+	public List<Board> getBoard() {
+		return board;
 	}
 
-	public void setTile(List<Tile> tile) {
-		this.tile = tile;
+
+	public void setBoard(List<Board> board) { 	
+		this.board = board;
 	}
 
-	
+
 }

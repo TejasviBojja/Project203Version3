@@ -45,27 +45,26 @@ public class SignupResource {
 	 * @FormParam takes email id and password as input, goes into the database and if he/she is an authenticated person-then allows access to portal
 	 */
 	@POST
-	public LandingPageView verifySignup(@FormParam("email") String email, @FormParam("password") String password) throws URISyntaxException
+	public Response verifySignup(@FormParam("email") String email, @FormParam("password") String password) throws URISyntaxException
 	{
 		
 		URI uri=new URI("http://localhost:8080/MyTacks/home");
-		mongo test = new mongo();
-		 int count=0;
-		List list=null;
-		String firstName="";
+		
 		Signup signup=new Signup();
 		signup.setEmail(email);
 		signup.setPassword(password);
+		
+		mongo test = new mongo();
 		int value=test.verifyLogin(signup);
-		System.out.println("value in signup class is ::"+value);
+		
 		if(value==1){
-		list=mongo.getUserDetails(email);
-		 uri=new URI("http://localhost:8080/MyTacks/LandingPage?firstName="+firstName);
+		
+		 uri=new URI("http://localhost:8080/MyTacks/homepage?email="+email);
 		}
 		if(value==2){
 			uri=new URI("http://localhost:8080/MyTacks/register");
 		}
-		return new LandingPageView(email,list);
+		return Response.seeOther(uri).build();
 	
 	}
 }
