@@ -41,10 +41,12 @@ window.location.href="ViewBoard?boardName="+boardname;
 
 <div id="container">
     <#list board as b>
+    <#list email as e>
     <span style="float: left;">
-        <a href="http://localhost:8080/MyTacks/ViewBoard?boardName=${b.name}"> ${b.name} </a>
+        <a href="http://localhost:8080/MyTacks/ViewTile?boardName=${b.name}&email=${e}"> ${b.name} </a>
     </span>
     </div>
+    </#list>
     </#list>
     </form>
     
