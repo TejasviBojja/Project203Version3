@@ -66,8 +66,9 @@ function PickBoard(){
 alert('pickBoard() called');
 ImageDescription= document.getElementById('imageDescription').value
 BoardCategory=document.getElementById('boardCategory').value
-window.location.href="AddTile/tile?boardName="+BoardCategory+"&description="+ImageDescription+"&url="+ImageURL+"&email=deepthibrndvnm@gmail.com";
-
+<#list email as e>
+window.location.href="AddTile/tile?boardName="+BoardCategory+"&description="+ImageDescription+"&url="+ImageURL+"&email=${e}";
+</#list>
 }
 function popUpPickb(){
 ImageURL= document.getElementById('url').value
@@ -334,6 +335,7 @@ input[type="submit"]
 <br>
 <#list board as b>
 <h1><center>${b.name}</center><h1>
+<h2>${b.description}</h2>
  </#list>
  <br>
  <br>

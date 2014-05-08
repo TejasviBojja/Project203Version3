@@ -12,12 +12,22 @@ import com.yammer.dropwizard.views.View;
  
 public class AddTileView extends View {
 
+	private List email=new ArrayList();
 	private List<Board> board=new ArrayList<Board>();
 	
-	public AddTileView(List<Board> b){
+	public AddTileView(List b,String email){
 		super("/AddTile.ftl");
 		this.board=b;
+		this.email.add(email);
 		
+	}
+
+	public List getEmail() {
+		return email;
+	}
+
+	public void setEmail(List email) {
+		this.email = email;
 	}
 
 	public AddTileView() {

@@ -21,6 +21,7 @@ import cmpe203.project.MyTacks.api.resources.RegisterResource;
 import cmpe203.project.MyTacks.api.resources.ResetPasswordResource;
 import cmpe203.project.MyTacks.api.resources.SignupResource;
 import cmpe203.project.MyTacks.api.resources.ViewBoardResource;
+import cmpe203.project.MyTacks.api.resources.ViewTileResource;
 import cmpe203.project.MyTacks.config.mytacksServiceConfiguration;
 import cmpe203.project.MyTacks.views.RegisterView;
 
@@ -67,6 +68,7 @@ public class mytacksService extends Service<mytacksServiceConfiguration> {
 	environment.addResource(CreateTileResource.class);
 	environment.addResource(AddTileResource.class);
 	environment.addResource(ViewBoardResource.class);
+	environment.addResource(ViewTileResource.class);
 	
 	}
 

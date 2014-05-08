@@ -31,7 +31,7 @@ import com.mongodb.ServerAddress;
 		public mongo() {
 			 
 			try {
-				mongoClient = new MongoClient(new ServerAddress("localhost" , 27017));
+				mongoClient = new MongoClient(new ServerAddress("172.20.10.4" , 27017));
 			} catch (UnknownHostException e) {				
 				e.printStackTrace();
 			}
@@ -198,79 +198,47 @@ import com.mongodb.ServerAddress;
 			
 		}
 
-		public static  List getUserDetails(String email) {
+		public List getUserDetails(String email) {
 			DBCollection collection=db.getCollection("users");
-			System.out.print("inside mongo method");
 			BasicDBList boardsList=null;
 			BasicDBObject query=new BasicDBObject("email",email);
 			DBObject obj=collection.findOne(query);
 			if(obj!=null){
 			boardsList =  (BasicDBList) obj.get("boards");
-				//DBCollection boardCol = db.getCollection("boards");
-				try{
 					if(!boardsList.isEmpty())	
-				
-				//System.out.println("the boardlist object ::: "+boardsList);	
 				for (int i=0;i<boardsList.size();i++){
 				System.out.println("the boardlist object ::: "+boardsList.get(i));
 				
-				}
-			}catch(NullPointerException e){
-				
-			}
-			
-			
+				}		
 		}
 			return  boardsList;
 		}
 
 		public void createTile(String email,String boardName,Tile tile) {
 			DBCollection collection=db.getCollection("tiles");
-			System.out.print("collection in create Tile is ::::"+collection.count());
-			//BasicDBList boardsList=null;
-			BasicDBObject query=new BasicDBObject("boards.name",boardName);
-			DBObject obj= collection.findOne(query);
-			System.out.print("DB object is "+obj);
-			if(obj!=null){
-				//System.out.println("createTile function "+);
 				BasicDBObject object=new BasicDBObject();
-				BasicDBList tiles=new BasicDBList();
 				object.put("boardname", boardName);
 				object.put("email",email);
 				object.put("description", tile.getDescription());
 				object.put("url",tile.getUrl());
-				tiles.add(object);
-			//	BasicDBObject updateCommand = new BasicDBObject("$set", new BasicDBObject("tiles.$.description", tile.getDescription()));
+				collection.save(object);
+			}
 			
-				obj.put("tiles",tiles);
-				//collection.update(obj, updateCommand);
-				collection.save(obj);
-				//DBCollection boardCol = db.getCollection("boards");
-					}
-				}
 
 		
 		////this is for vie tiles ,, so name shud be viewTile()
-		public List viewBoard(String boardName) {
+		public List viewBoard(String boardName,String email) {
 			
 			
 			DBCollection collection=db.getCollection("tiles");
 			BasicDBList tilesList=new BasicDBList();
 			BasicDBObject query=new BasicDBObject("boardname",boardName);
-			DBObject obj= collection.findOne(query);
-			
-			
-			//	BasicDBObject obj=(BasicDBObject) cur.next();
-				//System.out.print("object in getting tiles is "+obj);
-			if(obj!=null){
-			BasicDBList tile=(BasicDBList) obj.get("tiles");
-				//tilesList.add(tile);
-				for(int i=0;i<tile.size();i++){
-				BasicDBObject b=(BasicDBObject) tile.get(i);
-				if(b.get("name").equals(boardName))
-					System.out.println(b.get("name"));
-					tilesList.add(b);
-				}
+			query.put("email", email);
+			DBCursor cur = collection.find(query);
+			if(cur.hasNext())
+			{
+				DBObject obj =cur.next();
+				tilesList.add(obj);
 			}return tilesList;
 		}
 }
