@@ -22,14 +22,15 @@ public class AddTileResource {
 
 //To get the category of board
 	@GET
-	public AddTileView getAddTile(@QueryParam("email") String email,@QueryParam("name") String boardName,@QueryParam("description") String description,@QueryParam("category") String category)
+	public AddTileView getAddTile(@QueryParam("email") String email,@QueryParam("name") String boardName,@QueryParam("description") String description,@QueryParam("category") String category,@QueryParam("private") String privacy)
 	{
 		mongo test=new mongo();
-		test.createBoard(email,boardName,description,category);
+		test.createBoard(email,boardName,description,category,privacy);
 		Board board=new Board();
 		board.setBoardName(boardName);
 		board.setCategory(category);
 		board.setDescription(description);
+		board.setPrivacy(privacy);
 		ArrayList<Board> b=new ArrayList<Board>();
 		b.add(board);
 		return new AddTileView(b);
@@ -39,6 +40,7 @@ public class AddTileResource {
 	@Path("/tile")
 	@GET
 	public AddTileView getTile(@QueryParam("email") String email,@QueryParam("boardName") String boardName,@QueryParam("description") String description,@QueryParam("url") String url){
+		System.out.println("in addtileResoucres ::::: "+boardName);
 		mongo test=new mongo();
 		List<Board> boards=test.getUserDetails(email);
 		Tile tile=new Tile();

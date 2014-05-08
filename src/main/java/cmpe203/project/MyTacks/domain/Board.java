@@ -5,7 +5,16 @@ public class Board {
 	private String boardName;
 	private String category;
 	private String description;
+	private String privacy;
 	
+	///dhanashree
+	public String getPrivacy() {
+		return privacy;
+	}
+	public void setPrivacy(String privacy) {
+		this.privacy = privacy;
+	}
+	//dhanashree
 	public String getBoardName() {
 		return boardName;
 	}

@@ -6,6 +6,15 @@ public class Tile {
 	
 	private String description;
 	
+	private String boardName;
+	// dipti 
+	public String getBoardName() {
+		return boardName;
+	}
+	public void setBoardName(String boardName) {
+		this.boardName = boardName;
+	}
+	///
 	public String getUrl() {
 		return url;
 	}

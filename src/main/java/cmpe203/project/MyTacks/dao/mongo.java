@@ -31,7 +31,7 @@ import com.mongodb.ServerAddress;
 		public mongo() {
 			 
 			try {
-				mongoClient = new MongoClient(new ServerAddress("10.0.0.20" , 27017));
+				mongoClient = new MongoClient(new ServerAddress("localhost" , 27017));
 			} catch (UnknownHostException e) {				
 				e.printStackTrace();
 			}
@@ -124,9 +124,10 @@ import com.mongodb.ServerAddress;
 			collection.save(obj);
 		}
 
-		public void createBoard(String email,String name, String description, String category) {
+		public void createBoard(String email,String name, String description, String category,String privacy) {
 			// TODO Auto-generated method stub
 			DBCollection collection=db.getCollection("users");
+		//	DBCollection tilesColl=db.getCollection("tiles");
 			try
 			{
 				DBObject query=new BasicDBObject("email",email);
@@ -136,12 +137,24 @@ import com.mongodb.ServerAddress;
 				object.put("name", name);
 				object.put("description",description);
 				object.put("category", category);
+				object.put("privacy", privacy);
 				object1.add(object);
 				//obj.put("boards",object1);
 				BasicDBObject updateCommand = new BasicDBObject("$push", new BasicDBObject("boards",object ));
 				
 				//obj.put("boards.$.tiles",tiles);
 				collection.update(obj, updateCommand);
+				//DBObject object2 = tilesColl.findOne(query);
+				//System.out.println("object2 :::: "+object2);
+				//if(object2 == null){
+					/*System.out.println("function inside object 2 ceration called");
+
+					BasicDBObject insTilesObj = new BasicDBObject();
+					insTilesObj.put("email",email);
+					insTilesObj.put("boardname", name);
+					tilesColl.insert(insTilesObj);
+				}*/
+				//tilesColl.update(object, o)
 				//collection.save(obj);
 			}
 			catch (MongoException.DuplicateKey e) {
@@ -205,17 +218,6 @@ import com.mongodb.ServerAddress;
 			}catch(NullPointerException e){
 				
 			}
-//				BasicDBList tilesList =  (BasicDBList) obj.get("tiles");
-//				for(Object element: boardsList) {
-//					   BasicDBList listIter = (BasicDBList)((BasicDBObject)element).get("tiles");
-//					   for(Object lit: listIter) {
-//					       System.out.println(lit);
-//					       //System.out.println(((BasicDBObject)lie).get("fromDate"));
-//					   }
-//					}
-				//System.out.println("the tiles are ::"+tilesList);
-			
-			
 			
 			
 		}
@@ -223,15 +225,18 @@ import com.mongodb.ServerAddress;
 		}
 
 		public void createTile(String email,String boardName,Tile tile) {
-			DBCollection collection=db.getCollection("users");
-			BasicDBList boardsList=null;
+			DBCollection collection=db.getCollection("tiles");
+			System.out.print("collection in create Tile is ::::"+collection.count());
+			//BasicDBList boardsList=null;
 			BasicDBObject query=new BasicDBObject("boards.name",boardName);
 			DBObject obj= collection.findOne(query);
 			System.out.print("DB object is "+obj);
 			if(obj!=null){
+				//System.out.println("createTile function "+);
 				BasicDBObject object=new BasicDBObject();
 				BasicDBList tiles=new BasicDBList();
-				object.put("name", boardName);
+				object.put("boardname", boardName);
+				object.put("email",email);
 				object.put("description", tile.getDescription());
 				object.put("url",tile.getUrl());
 				tiles.add(object);
@@ -244,12 +249,14 @@ import com.mongodb.ServerAddress;
 					}
 				}
 
+		
+		////this is for vie tiles ,, so name shud be viewTile()
 		public List viewBoard(String boardName) {
 			
 			
-			DBCollection collection=db.getCollection("users");
+			DBCollection collection=db.getCollection("tiles");
 			BasicDBList tilesList=new BasicDBList();
-			BasicDBObject query=new BasicDBObject("tiles.name",boardName);
+			BasicDBObject query=new BasicDBObject("boardname",boardName);
 			DBObject obj= collection.findOne(query);
 			
 			
@@ -266,8 +273,7 @@ import com.mongodb.ServerAddress;
 				}
 			}return tilesList;
 		}
-			
-		}
+}
 
 	
 		

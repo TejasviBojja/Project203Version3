@@ -63,9 +63,10 @@ $("#Main_page").fadeOut(1000);
 }
 
 function PickBoard(){
+alert('pickBoard() called');
 ImageDescription= document.getElementById('imageDescription').value
 BoardCategory=document.getElementById('boardCategory').value
-window.location.href="AddTile/tile?boardName="+ BoardCategory +"&description="+ImageDescription+"&url="+ImageURL+"&email=deepthibrndvnm@gmail.com";
+window.location.href="AddTile/tile?boardName="+BoardCategory+"&description="+ImageDescription+"&url="+ImageURL+"&email=deepthibrndvnm@gmail.com";
 
 }
 function popUpPickb(){
@@ -202,7 +203,7 @@ input[type="submit"]
 <tr>
 	<td>
       <h3 >Category </h3>
-      <input type="text" id="boardcategory" value="">
+      <input type="text" id="boardCategory" value="">
       
       <h3><label for="ImageEditDescription">Description</label></h3>
      
@@ -332,8 +333,7 @@ input[type="submit"]
 
 <br>
 <#list board as b>
-<h1><center>${b.boardName}</center><h1>
-<h3><center>${b.description}</center><h3>
+<h1><center>${b.name}</center><h1>
  </#list>
  <br>
  <br>

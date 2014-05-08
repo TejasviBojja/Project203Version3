@@ -18,8 +18,9 @@ alert('function called');
 boardName= document.getElementById('boardname').value
 description= document.getElementById('boarddescription').value
 category= document.getElementById('boardcategory').value
+private= document.getElementById('private').value
 <#list register as r>
-window.location.href="AddTile?email=${r.email}&name="+ boardName+"&description="+description+"&category="+category;
+window.location.href="AddTile?email=${r.email}&name="+ boardName+"&description="+description+"&category="+category+"&private="+private;
 </#list>
 }
 
@@ -210,7 +211,14 @@ float:right;
   			<option value="sports">Sports</option>
   			<option value="images">Images</option>
 		</select>
+		<br><br>
+		<div>
+			<label>Private Board&nbsp</label>
+				<input type="radio" id="private" name="private" value="yesPrivate">Yes
+				<input type="radio" name="private" value="No">No<br>
+		</div>
          	<div class="formFooter">
+        <br>
         		<div class="formFooterButtons">
             	<button type="button" onclick="closepopup()" class="rounded Button hasText Module ajax btn cancelButton">    
 					<span class="buttonText">Cancel</span>
