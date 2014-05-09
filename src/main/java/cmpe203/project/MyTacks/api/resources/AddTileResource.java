@@ -33,7 +33,7 @@ public class AddTileResource {
 		board.setPrivacy(privacy);
 		ArrayList<Board> b=new ArrayList<Board>();
 		b.add(board);
-		return new AddTileView(b);
+		return new AddTileView(b,email);
 	}
 
 //To get the description for the board	
@@ -47,7 +47,7 @@ public class AddTileResource {
 		tile.setDescription(description);
 		tile.setUrl(url);
 		test.createTile(email,boardName,tile);
-		return new AddTileView(boards);
+		return new AddTileView(boards,email);
 	}
 
 }
